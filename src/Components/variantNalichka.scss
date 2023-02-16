@@ -1,0 +1,85 @@
+*{
+
+    max-width: 430px;
+    box-sizing: border-box;
+   
+}
+
+.div_variantt{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding: 16px;
+    margin-bottom: 16px;
+    // border: solid 1px red;
+    .div_nalichka_var{
+        cursor: pointer;
+        width: 392px;
+        height: 54px;
+        display:inline-flex;
+        padding: 8px;
+        background: #ffffff;
+        border-radius: 16px;
+        margin-bottom: 16px;
+        box-shadow: -5px 5px 10px rgba(220, 220, 220, 0.2), 
+        -5px -5px 10px rgba(255, 255, 255, 0.9), 
+        5px 5px 13px rgba(220, 220, 220, 0.4);
+        // border: solid 1px red;
+        .div_txt{
+            width: 100%;
+            height: 38px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            // border: solid 1px;
+            div{
+                // width: 125px;
+                display: inline-flex;
+                justify-content: space-between;
+                // border: solid 1px red;
+                p{
+                    width: fit-content;
+                    height: 14px;
+                    font-family: 'Roboto', sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: #0D121F;
+                    opacity: 0.5;
+                    // border: solid 0.1px blue;
+                }
+            }
+        }
+        img{
+            width: 44px;
+            height: 38px;
+            float: right;
+            margin-right: 8px;
+        }
+    }
+    h3{
+        width: 100%;
+        height: 16px;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #0D121F;
+        margin-bottom: 8px;
+    }
+    p{
+        width: 100%;
+        height: 14px;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #0D121F;
+        opacity: 0.5;
+    }
+}

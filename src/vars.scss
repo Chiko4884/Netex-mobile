@@ -1,0 +1,9 @@
+@mixin breakpoint($point) {
+
+    @if $point == w320{
+        @media(max-width:320px){@content;} 
+    }
+
+}
+
+

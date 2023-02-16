@@ -1,0 +1,33 @@
+
+.pin_div{
+    width: 320px;
+    height: 48px;
+    position: absolute;
+    top: 320px;
+}
+.pin_code_div{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 10px;
+    width: 320px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 12px;
+}
+.pin_code_inp{
+    width: 64.5px;
+    height: 16px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #0D121F;
+    border: none;
+}

@@ -1,0 +1,269 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 430px;
+    max-height: 932;
+    box-sizing: border-box;
+}
+.auth_container{
+    // margin-top: auto;
+    width: 100%;
+    // min-height: 100%;
+    height: auto;
+    position: absolute ;
+    // z-index: 0;
+    // border: solid 1px #d00f0f;
+    img{
+        position: relative;
+        // z-index: 0;
+    }
+.auth_head{
+    width: 100%;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.01);
+    // border: solid 0.1px red;
+}
+.under_head{
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 16px;
+    // border: solid 0.1px red;
+h3{
+    width: 99px;
+    height: 19px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #111111;
+}
+}
+}
+
+.login_form{
+    display: table;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 32px 24px;
+    position: absolute;
+    width: 100%;
+    height: 471px;
+    z-index: 0;
+    // left: 0px;
+    // bottom: 0px;
+    top: 455px;
+    background: #F8F8FE;
+    // backdrop-filter: blur(17px);
+    border-radius: 24px;
+    // border: solid 1px rgb(19, 182, 60);
+    // background-color: rgb(178, 223, 43);
+    .div_email{
+        width: 100%;
+        height: 86px;
+        // border: solid 1px red;
+    }
+    .div_pass{
+        width: 100%;
+        height: 86px;
+        // border: solid 1px red;
+    }
+.err_message{
+    font-size: 12px;
+    opacity: 0.8;
+    margin-left: 50px;
+    // border: solid 1px red;
+}
+    h1{
+        height: 42px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 42.19px;
+        color: rgba(13, 18, 31, 1);
+        margin-bottom: 8px;
+    }
+    p{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #0D121F;
+        opacity: 0.5;
+        margin-bottom: 16px;
+    }
+    h3{
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #0D121F;
+        margin-bottom: 8px;
+
+    }
+    input{
+        width: 100%;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 16px;
+        gap: 10px;
+        background: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        border-radius: 12px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #0D121F;
+    }
+    .password-icon{
+        position: absolute;
+        top: 20px;
+    }
+    .toggle_icon_close{
+        cursor: pointer;
+        position: absolute;
+        width: 20px;
+        height: 16px;
+        bottom: 215px;
+        right: 50px;
+        background: rgba(255, 255, 255, 1);
+        border: none;
+        background-image: url(../public/img/eye_close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:hover{
+            transform: scale(1.05);
+        } 
+    }
+    .toggle_icon_open{
+        cursor: pointer;
+        position: absolute;
+        width: 20px;
+        height: 16px;
+        bottom: 215px;
+        right: 50px;
+        background: rgba(255, 255, 255, 1);
+        border: none;
+        background-image: url(../public/img/eye_open.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:hover{
+            transform: scale(1.05);
+        }
+        
+    }
+    .submit_btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        // gap: 10px;
+        width: 100%;
+        height: 56px;
+        background: #FFE400;
+        border-radius: 12px;
+        flex: none;
+        order: 3;
+        align-self: stretch;
+        flex-grow: 0;
+        margin-bottom: 16px;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.001);
+        }
+        p{
+            width: 127px;
+            height: 16px;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: #0D121F;
+            // border: solid 1px red;
+        }  
+    }
+
+    .link_forgot{
+        position: relative;
+        width: 100%;
+        height: 19px;
+        margin-bottom: 16px;
+        // border: solid 1px red;
+        color: #062e6a;
+        cursor: pointer;
+        text-decoration-line: underline;
+        text-align: center; 
+        .open_forgot{
+            cursor: pointer;
+            width: 364px;
+            height: 19px;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            text-decoration-line: underline;
+            // color: #000000;
+        }
+    }
+    .div_no_acc_reg{
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0px;
+        width: 100%;
+        height: 51px;
+        position: relative;
+        // border: solid 1px red;
+        .no_account{
+            width: 166px;
+            height: 19px;
+            z-index: 0;
+            // border: solid 1px red;
+                font-family: 'Roboto', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                color: #000000;
+                margin-bottom: 0;
+        }
+        .link-reg{
+            z-index: 0;
+            cursor: pointer;
+            width: 182px;
+            height: 19px;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-decoration-line: underline;
+            color: #000000;
+            text-transform: uppercase;
+            // border: solid 1px red;
+        }
+    
+    }
+
+
+}
+
