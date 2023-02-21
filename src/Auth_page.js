@@ -18,13 +18,16 @@ const navigate = useNavigate();
     const togglePass  = () => {
         SetToggleIconState(!toggleIconState)
     }
-
+    // console.log(window.innerWidth);
     return (
+
     <div className="auth_container">
         <div className='auth_head'> </div>
         <div className='under_head'><h3>Авторизация</h3></div>
         <img className='auth_foto' src= './img/B-img.png'/>
         {/* <Login className='import_login'/> */}
+
+        <div className='div_login_form'>
         <form onSubmit={handleSubmit(onSubmit)} className='login_form'>
         <div className="h1_">
         <h1>Войти в аккаунт</h1>
@@ -83,16 +86,18 @@ const navigate = useNavigate();
             <p>ВОЙТИ В АККАУНТ</p>
         </button>
 
-        <div className='link_forgot'> 
-        <ForgotPassModal/>
-        </div>
+
         <div className="div_no_acc_reg">
-        <p className="no_account">Еще нет аккаунта?</p>
+        <h5 className="no_account">Еще нет аккаунта?</h5>
         <Link className='link-reg'
-                to="./reg_page"><p className="register">зарегистрироваться</p></Link>
+                to="./reg_page"><h6 className="register">зарегистрироваться</h6></Link>
         </div>
 
     </form>
+        <div className='link_forgot'>
+        <ForgotPassModal/>
+        </div>
+        </div>
     </div>
     )
 }

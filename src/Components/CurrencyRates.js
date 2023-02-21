@@ -31,7 +31,7 @@ function CurrencyRates(){
         <div className="div_rates">
             {/* варианты курсов валют */}
             {currencyRates.map((item) => (
-            <div className='div_rates_var'>
+        <div className='div_rates_var' key={item.id}>
             <img className='logo_' src={item.icon}/>
                 <div className='div_txt'>
                 <div> <h3>{item.title}</h3> <h3>{item.price}</h3></div>

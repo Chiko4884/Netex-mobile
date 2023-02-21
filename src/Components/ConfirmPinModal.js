@@ -21,21 +21,21 @@ function ConfirmPinModal(){
         <div className="div_modal_conf" >
                 <div className="img_blur" >  </div>
                 <div className="div_blur" >  </div>
-        <form className="form_pin">
+        <div className="form_pin">
             <img className="img_" alt="forgot" src="./img/forgot_pass.png"/>
                  <h3>Подтверждение</h3>
                  <p>Вам на почту пришел код подтверждения, введите его в поле ниже.</p>
 
 <div className="div_pin">
 
-        <form>
+        <div>
             <PinCodeInput
             digits={digits} 
             changeHandler={setDigits} 
             ref={firstInputRef}
             />
             {/* <button onClick={event => clear(event)}>Очистить</button> */}
-        </form>
+        </div>
 
 </div>
 
@@ -43,10 +43,11 @@ function ConfirmPinModal(){
         onClick={handleSubmit(onSubmit)}
         className="submit_btn_pin" 
         type="submit" 
+        
         >
             <p>ОТПРАВИТЬ</p>
         </button>
-                </form>
+     </div>
         </div>
     )
 }

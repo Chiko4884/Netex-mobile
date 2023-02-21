@@ -40,10 +40,10 @@ return (
         <div className='main_head'> </div>
         <div className='div_running_line'>
             {crypto.map((item) => (
-            <div className='card_valuta'>
+            <div className='card_valuta' key={item.id} >
                     <img src={item.icon_coin} alt={item.name_coin}/>
-                    <h3>{item.name_coin}</h3>
-                    <h6>{item.price}</h6>
+                    <h3 >{item.name_coin}</h3>
+                    <h6 >{item.price}</h6>
                     <p>{item.change}</p>
                     <p>({item.change_procent})</p>
             </div>

@@ -1,18 +1,35 @@
-
-
+@import '../vars';
+$wh_: calc(428px/926px);
+$w_: 428px;
+$h_: 926px;
 
 *{
     margin: 0;
     padding: 0;
-    max-width: 430px;
-    max-height: 932px;
+    max-width: 428px;
     box-sizing: border-box;
+    @include breakpoint(w414){
+        max-width: 414px;
+    }
+    @include breakpoint(w393){
+        max-width: 393px;
+    }
+    @include breakpoint(w375){
+        max-width: 375px;
+    }
+    @include breakpoint(w360){
+        max-width: 360px;
+    }
+    @include breakpoint(w320){
+        max-width: 320px;
+    }
+
 }
 .container{
     margin: auto;
     position: absolute;
-    width: 428px;
-    height: 926px;
+    width: 100%;
+    min-height: 100%;
     box-sizing: content-box;
     background-color: #0D121F;
     display: table;
@@ -21,8 +38,8 @@
 }
 
 .logo{
-    margin-top: 387px;
-    margin-left: 161px;
+    margin-top: 40vh;
+    margin-left: 35vw;
     position: absolute;
 }
 

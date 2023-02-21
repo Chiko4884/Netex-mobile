@@ -89,7 +89,7 @@ function Popolnenie_compon(){
         <div className="div_sposob">
             <input className="btns" type="radio" id="ar1" name="check-ar" 
             onChange={()=>{SetCheckedVariant(VariantCripto) }}  defaultChecked />
-            <label className="lbl" for="ar1">
+            <label className="lbl" htmlFor="ar1">
             <div className="fon_svg"><Cripto_svg className='svg' width='10' height='16'/></div>
             <div className='div_txt_func'>
             <h3>Криптовалюты</h3>
@@ -101,7 +101,7 @@ function Popolnenie_compon(){
         <div className="div_sposob">
             <input className="btns" type="radio" id="ar2" name="check-ar" 
             onChange={()=>{SetCheckedVariant(VariantFiat) }}  />
-            <label className="lbl" for="ar2">
+            <label className="lbl" htmlFor="ar2">
             <div className="fon_svg"><Fiat_svg className='svg' width='16' height='16'/></div>
             <div className='div_txt_func'>
             <h3>Фиат</h3>
@@ -113,7 +113,7 @@ function Popolnenie_compon(){
         <div className="div_sposob">
             <input className="btns" type="radio" id="ar3" name="check-ar" 
             onChange={()=>{SetCheckedVariant(VariantTerminal) }}  />
-            <label className="lbl" for="ar3">
+            <label className="lbl" htmlFor="ar3">
             <div className="fon_svg"><Terminal_svg className='svg' width='16' height='16'/></div>
             <div className='div_txt_func'>
             <h3>Терминалы</h3>
@@ -125,7 +125,7 @@ function Popolnenie_compon(){
         <div className="div_sposob">
             <input className="btns" type="radio" id="ar4" name="check-ar" 
             onChange={()=>{SetCheckedVariant(VariantNalichka) }}  />
-            <label className="lbl" for="ar4">
+            <label className="lbl" htmlFor="ar4">
             <div className="fon_svg"><Nalichka_svg className='svg' width='16' height='16'/></div>
             <div className='div_txt_func'>
             <h3>Наличные</h3>

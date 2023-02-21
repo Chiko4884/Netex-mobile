@@ -20,7 +20,7 @@ function Wallets(){
 
         <div className='div_wallets'>
             {walletsData.map((item) => (
-            <div className='div_wallet'>
+            <div className='div_wallet' key={item.id}>
             <img className='logo_binance' src={item.icon}/>
                 <div className='div_txt_'>
                 <h3>{item.title}</h3>

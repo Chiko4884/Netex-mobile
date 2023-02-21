@@ -1,23 +1,46 @@
+@import './vars';
+
+
 *{
     margin: 0;
     padding: 0;
-    max-width: 430px;
-    max-height: 932;
+    max-width: 428px;
     box-sizing: border-box;
+    @include breakpoint(w414){
+        max-width: 414px;
+    }
+    @include breakpoint(w393){
+        max-width: 393px;
+    }
+    @include breakpoint(w375){
+        max-width: 375px;
+    }
+    @include breakpoint(w360){
+        max-width: 360px;
+    }
+    @include breakpoint(w320){
+        max-width: 320px;
+    }
 }
 .register_container{
-    margin-top: auto;
+    // margin-top: auto;
     width: 100%;
-    height: 100%;
+    min-height: auto;
     position: absolute ;
+}
+.B_foto{
+        position: relative;
+        width: 100%;
+    }
+
 .register_head{
-    width: 428px;
+    width: 100%;
     height: 36px;
     background: rgba(255, 255, 255, 0.01);
     // border: solid 0.1px red;
 }
 .under_head{
-    width: 428px;
+    width: 100%;
     height: 48px;
     text-align: center;
     display: flex;
@@ -40,7 +63,7 @@
         text-decoration: none;
         // border: solid 0.1px red;
         padding-left: 16px;
-        position: relative;
+        position: absolute;
         &::before{
             content: "";
             width: 8px;
@@ -70,4 +93,4 @@
     // border: solid 0.1px red;
 }
 }
-}
+

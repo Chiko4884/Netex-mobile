@@ -22,9 +22,8 @@ const onSubmit = data => {console.log(digits); navigate("/")};
         <div className='register_head'> </div>
         <div className='under_head'>
         <Link className='back_auth'
-                to="/auth_page">Назад</Link>
+                to="/">Назад</Link>
             <h3>Регистрация</h3>
-            
         </div>
         <img className='B_foto' src= './img/B-img.png'/>
 

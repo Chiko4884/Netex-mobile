@@ -30,7 +30,8 @@ const [checkPass, setCheckPass] = useState()
 // }
 
 return(
-    <form onSubmit={handleSubmit(onSubmit)} className='regis_form'>
+<div className="div_reg_form">
+<form onSubmit={handleSubmit(onSubmit)} className='regis_form'>
     <div className="h1_">
     <h1>Регистрация</h1>
     <p>Введите свои данные для регистрации</p>
@@ -130,7 +131,7 @@ return(
 
 <div className="div_agree">
 <input onChange={() => setChecked(!checked)} className="chb_agree" defaultChecked type="checkbox" id="chek_id" name="user_agree"/>
-            <label  className="agree_lbl" for="chek_id">
+            <label  className="agree_lbl" htmlFor="chek_id">
              Нажимая на кнопку “Регистрация” я принимаю условия
              <a href="" className="ssylka_agree" > Пользовательского соглашения</a>
             </label>
@@ -145,6 +146,7 @@ return(
     </button>
 
 </form>
+</div>
 )
 
 }
