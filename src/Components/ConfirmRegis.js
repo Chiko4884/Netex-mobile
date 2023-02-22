@@ -36,14 +36,14 @@ const onSubmit = data => {console.log(digits); navigate("/")};
              <p>Вам на почту пришел код подтверждения, введите его в поле ниже.</p>
 
 <div className="div_pin">
-<form>
+
             <PinCodeInput
             digits={digits} 
             changeHandler={setDigits} 
             ref={firstInputRef}
             />
             {/* <button onClick={event => clear(event)}>Очистить</button> */}
-        </form>
+        
 </div>
 
     <button 

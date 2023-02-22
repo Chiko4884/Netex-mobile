@@ -76,7 +76,7 @@ function PinCodeInput(props, refer) {
     }
 
     return (
-        <form className='pin_code_div' >
+        <div className='pin_code_div' >
             {digits.map((digit, index) => (
                 <input  
                     className='pin_code_inp'
@@ -89,7 +89,7 @@ function PinCodeInput(props, refer) {
                     ref={element => inputRefs.current[index] = element}
                 />
             ))}
-        </form>
+        </div>
     );
 
 }

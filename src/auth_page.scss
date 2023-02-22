@@ -66,7 +66,7 @@ h3{
     height: auto;
     top: calc(100vh - 471px);
     @include breakpoint(w320){
-        top: calc(100vh - 438px);
+        top: calc(100vh - 444px);
     }
 }
 .login_form{
@@ -264,6 +264,7 @@ h3{
     }
     @include breakpoint(w320){
         margin-top: 15px;
+        flex-direction: column;
     }
 h5{
     width: 166px;
@@ -280,10 +281,14 @@ h5{
     @include breakpoint(w360){
     text-align: center;
     margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 0px;
     }
     @include breakpoint(w320){
+        margin-top: 10px;
         margin-bottom: 0px;
         font-size: 12px;
+        text-align: center;
     }
 } 
     .link-reg{

@@ -1,22 +1,22 @@
 @mixin breakpoint($point) {
 
-    @if $point == w428{//iphone12,13ProMax, 14Plus
-        @media(max-width:428px){@content;} 
-    }
-    @else if $point == w414{//iphone6,7,8,11,XR,XS
-        @media(max-width:414px){@content;} 
+    // @if $point == w428{//iphone12,13ProMax, 14Plus
+    //     @media(max-width:428px){@content;} 
+    // }
+    @if $point == w414{//iphone6,7,8,11,XR,XS
+        @media (min-width:394px) and (max-width:414px) {@content;} 
     }
     @else if $point == w393{//iphone14Pro, googlePixel, Xiaomi
-        @media(max-width:393px){@content;} 
+        @media (min-width:376px) and (max-width:393px){@content;} 
     }
     @else if $point == w375{//iphone6,7,8,X,XS,11PRO,12,13MINI,SE2020
-        @media(max-width:375px){@content;} 
+        @media (min-width:361px) and (max-width:375px){@content;} 
     }
     @else if $point == w360{//samsung, lg,huawie,honor
-        @media(max-width:360px){@content;} 
+        @media (min-width:321px) and (max-width:360px){@content;} 
     }
     @else if $point == w320{//iphone4,5,SE, LG
-        @media(max-width:320px){@content;} 
+        @media (min-width:300px) and (max-width:320px){@content;} 
     }
 
 }

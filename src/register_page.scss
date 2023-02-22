@@ -64,6 +64,7 @@
         // border: solid 0.1px red;
         padding-left: 16px;
         position: absolute;
+
         &::before{
             content: "";
             width: 8px;
@@ -91,6 +92,433 @@
     line-height: 19px;
     color: #111111;
     // border: solid 0.1px red;
+    @include breakpoint(w360){
+        text-align: start;
+    }
+    @include breakpoint(w320){
+        text-align: start;
+    }
 }
 }
 
+
+
+// .div_reg_form{
+//     margin: 0;
+//     padding: 0;
+//     position: absolute;
+//     width: 100vw;
+//     // bottom: -271px;
+//     height: 671px;
+//     // border: solid 0.1px red;
+//     top: calc(100vh - 637px);
+// }
+.h1_{
+    margin-bottom: 10px;
+    // border: solid 1px red;
+}
+.div_name {
+    width: 100%;
+    height: 85px;
+    // border: solid 0.1px red;
+    @include breakpoint(w375){
+        height: 75px;  
+    }
+    @include breakpoint(w320){
+        height: 65px;  
+    }
+}
+.div_lastname{
+    width: 100%;
+    height: 85px;
+    // border: solid 0.1px red; 
+    @include breakpoint(w375){
+        height: 75px;  
+    }
+    @include breakpoint(w320){
+        height: 65px;  
+    }
+}
+.div_mail{
+    width: 100%;
+    height: 85px;
+    // border: solid 0.1px red;
+    @include breakpoint(w375){
+        height: 75px;  
+    } 
+    @include breakpoint(w320){
+        height: 65px;  
+    }
+}
+.div_pas{
+    width: 100%;
+    height: 86px;
+    // border: solid 0.1px red; 
+    @include breakpoint(w375){
+        height: 75px;  
+    }
+    @include breakpoint(w320){
+        height: 65px;  
+    }
+}
+.div_pas2{
+    width: 100%;
+    height: 85px;
+    margin-bottom: 1px;
+    // border: solid 0.1px red; 
+    @include breakpoint(w375){
+        height: 75px;  
+    }
+    @include breakpoint(w320){
+        height: 65px;  
+    }
+}
+.err_message{
+font-size: 12px;
+opacity: 0.8;
+margin-left: 50px;
+// border: solid 1px red;
+@include breakpoint(w375){
+    margin-left: 30px;
+}
+@include breakpoint(w320){
+    margin-left: 20px;
+    font-size: 10px;
+}
+}
+.regis_form{
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 32px 24px;
+    position: absolute;
+    height: 671px;  
+    top: calc(100vh - 671px);
+    background: rgba(248, 248, 254, 1);
+    // border-radius: 24px;
+    // border: solid 1px rgb(223, 24, 170);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    @include breakpoint(w375){
+        top: calc(100vh - 590px);
+        height: 590px;  
+    }
+    @include breakpoint(w320){
+        top: calc(100vh - 490px);
+        height: 490px; 
+        padding: 25px 25px 15px; 
+    }
+
+    h1{
+        height: 42px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 42.19px;
+        color: rgba(13, 18, 31, 1);
+        margin-bottom: 8px;
+        @include breakpoint(w375){
+            font-size: 28px;
+            line-height: 30px;
+            margin-bottom: 2px;
+        }
+        @include breakpoint(w320){
+        display: none;
+        }
+    }
+    p{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #0D121F;
+        opacity: 0.5;
+        @include breakpoint(w320){
+            margin-top: 0;
+        }
+    }
+    h3{
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #0D121F;
+        margin-bottom: 4px;
+    }
+    input{
+        width: 100%;
+        height: 45px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 16px;
+        margin-bottom: -5px;
+        background: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        border-radius: 12px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #0D121F;
+        @include breakpoint(w375){
+            height: 35px; 
+        }
+        @include breakpoint(w320){
+            height: 30px; 
+        }
+        
+    }
+
+    .toggle_icon_close1{
+        cursor: pointer;
+        position:absolute;
+        width: 20px;
+        height: 16px;
+        bottom: 255px;
+        left: 82vw;
+        background: rgba(255, 255, 255, 1);
+        border: none;
+        background-image: url(../public/img/eye_close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:hover{
+            transform: scale(1.05);
+        } 
+        @include breakpoint(w375){
+            bottom: 215px;
+        }
+        @include breakpoint(w360){
+            bottom: 255px;
+        }
+        @include breakpoint(w320){
+            bottom: 175px;
+        }
+    }
+    .toggle_icon_open1{
+        cursor: pointer;
+        position: absolute;
+        width: 20px;
+        height: 16px;
+        bottom: 255px;
+        left: 82vw;
+        background: rgba(255, 255, 255, 1);
+        border: none;
+        background-image: url(../public/img/eye_open.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:hover{
+            transform: scale(1.05);
+        }
+        @include breakpoint(w375){
+            bottom: 215px;
+        }
+        @include breakpoint(w360){
+            bottom: 255px;
+        }
+        @include breakpoint(w320){
+            bottom: 175px;
+        }
+    }
+
+    .toggle_icon_close2{
+        cursor: pointer;
+        position: absolute;
+        width: 20px;
+        height: 16px;
+        bottom: 170px;
+        left: 82vw;
+        background: rgba(255, 255, 255, 1);
+        border: none;
+        background-image: url(../public/img/eye_close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:hover{
+            transform: scale(1.05);
+        } 
+        @include breakpoint(w375){
+            bottom: 140px;
+        }
+        @include breakpoint(w360){
+            bottom: 168px;
+        }
+        @include breakpoint(w320){
+            bottom: 110px;
+        }
+    }
+    .toggle_icon_open2{
+        cursor: pointer;
+        position: absolute;
+        width: 20px;
+        height: 16px;
+        bottom: 170px;
+        left: 82vw;
+        background: rgba(255, 255, 255, 1);
+        border: none;
+        background-image: url(../public/img/eye_open.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:hover{
+            transform: scale(1.05);
+        }
+        @include breakpoint(w375){
+            bottom: 140px;
+        }
+        @include breakpoint(w360){
+            bottom: 168px;
+        }
+        @include breakpoint(w320){
+            bottom: 110px;
+        }
+    }
+
+    .submit_btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        padding-top: 20px;
+        width: 100%;
+        height: 56px;
+        background: #FFE400;
+        border-radius: 12px;
+        flex: none;
+        margin-bottom: 9px;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.001);
+        }
+        @include breakpoint(w320){
+            height: 36px;
+            padding-top: 10px;
+        }
+        p{
+            width: 161px;
+            height: 16px;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: #0D121F;
+            // border: solid 1px red;
+        }  
+    }
+ 
+.div_agree{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 46px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    // border: solid 0.1px red;
+    margin-top: 0;
+    @include breakpoint(w375){
+       padding: 0;
+       margin-top: -10px;
+       margin-bottom: 10px;
+    }
+    @include breakpoint(w360){
+        padding: 0;
+        margin-top: -10px;
+        margin-bottom: 10px;
+     }
+     @include breakpoint(w320){
+        padding: 0;
+        margin-top: -5px;
+        margin-bottom: 5px;
+     }
+
+    .chb_agree{
+        cursor: pointer;
+        /* remove standard background appearance */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        /* create custom radiobutton appearance */
+        display: flex;
+        width:0;
+        height:0;
+        // display: none;
+        // border-radius: 0%;
+        /* background-color only for content */
+        background-clip: content-box;
+        border: 2px solid rgba(37, 54, 89, 0.0001);
+        &::before{
+            content: '✔';
+            color: rgb(242, 228, 228);
+            font-size: 20px;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            border: 0.1px solid rgba(37, 54, 89, 0.1);
+            background: #cacac6; 
+            position: absolute;
+            left: 35px;
+            bottom: 100px;
+            @include breakpoint(w375){
+                bottom: 85px;
+            }
+            @include breakpoint(w360){
+                bottom: 110px;
+            }
+            @include breakpoint(w320){
+                bottom: 60px;
+            }
+        }
+        &:checked::before{
+            content: '✔';
+            color: white;
+            background: #FFE400; 
+            position: absolute;
+            width: 20px;
+            height: 20px;
+           background-size:cover;
+            background-position: center;
+            font-size: 25px;
+            border-radius: 50%;
+            left: 35px;
+            bottom: 100px;
+            @include breakpoint(w375){
+                bottom: 85px;
+            }
+            @include breakpoint(w360){
+                bottom: 110px;
+            }
+            @include breakpoint(w320){
+                bottom: 60px;
+            }
+        }
+
+    }
+    .agree_lbl{
+        width: 79vw;
+        height: 28px;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #0D121F;
+        margin-left: 10px;
+        // border: solid 1px red;
+        .ssylka_agree{
+            color:#FCE34D;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+}
+
+}

@@ -80,6 +80,9 @@
     @include breakpoint(w375){
         top: calc(100vh / 6);
     }
+    @include breakpoint(w360){
+        top: calc(100vh / 6);
+    }
     @include breakpoint(w320){
         top: calc(100vh / 9);
     }

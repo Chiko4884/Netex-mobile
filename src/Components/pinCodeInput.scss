@@ -8,19 +8,22 @@
 // }
 .pin_code_div{
     display: flex;
+    position: absolute;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 16px;
     gap: 10px;
-    width: 75vw;
+    width: 85vw;
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #CCCCCC;
     border-radius: 12px;
+    // border: solid 1px blue;
+
 }
 .pin_code_inp{
-    width: 64px;
+    width: 14vw;
     height: 16px;
     display: flex;
     flex-direction: row;

@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react'
 import  './zastavka.scss';
-import { useNavigate } from "react-router"
 
 function Zastavka(){
 
@@ -16,7 +15,7 @@ function Zastavka(){
         clearTimeout(timeId)
       }
     }, []);
-    const navigate = useNavigate();
+
 
     if (!show){
         return (
@@ -30,6 +29,7 @@ function Zastavka(){
         <img className='logo' src= './img/netex_logo.svg'/>
         </div>
     )
+    
 }
 
 export default Zastavka;
