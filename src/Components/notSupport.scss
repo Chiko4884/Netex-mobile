@@ -1,0 +1,28 @@
+// *{
+//     margin: 0;
+//     padding: 0;
+//     max-width: 100%;
+//     min-height: 100%;
+//     box-sizing: border-box;
+// }
+.not_support{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #d9d3d3;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 100000000;
+    padding-top: 20%;
+    h1{
+        width: 70vw;
+        height: 100%;
+        font-size: 2rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: black;
+    }
+}

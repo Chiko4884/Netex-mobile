@@ -23,13 +23,14 @@ function Zastavka(){
         )
     }
 
-    
+
     return (
         <div className='container'>
         <img className='logo' src= './img/netex_logo.svg'/>
         </div>
     )
     
+
 }
 
 export default Zastavka;

@@ -7,7 +7,6 @@ import ConfirmRegis from "./Components/ConfirmRegis";
 import { ForgotPassModal } from "./Components/ForgotPassModal";
 import Zastavka from './Components/Zastavka';
 import { Register_page } from "./Register_page";
-import Start from "./Start";
 import FormCodeInput from './Components/FormCodeInput';
 import Main_page from './Main_page';
 import Wallets from './Wallets';
@@ -19,8 +18,7 @@ import CurrencyRates from './Components/CurrencyRates';
 function App(){
       return (
         <div>
-            <Zastavka/>
-            {/* <Main_page/> */}
+          <Zastavka/>
             <Routes>
                 <Route path='/' element= {<Auth_page/>}/>
                 <Route path='reg_page' element= {<Register_page/>}/>
