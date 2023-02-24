@@ -28,7 +28,7 @@ function Popolnenie_compon(){
                 to="/main_page">Назад</Link>
             <h3>Пополнение</h3>
         </div>
-        <div className='user_div'>
+        <div className='user_div_pop'>
             <div className='div_name_balance'>
                 <div className='div_name'>
                     <h3>Artem Konkin</h3>
@@ -62,16 +62,17 @@ function Popolnenie_compon(){
                     </div>
                     
                 </div>
+                <Link to='/currency_rates' className ='link_cur_rates'>
+           
+           <img className='logo_vyvod_popolnit' src='./img/logo_kurs_valut.png'/>
+                   <div className='div_txt'>
+                   <h3>Курсы валют</h3>
+                   <p>Фиат</p>
+                   </div>
+          
+           </Link>
             </div>
-            <Link to='/currency_rates' className ='link_cur_rates'>
-            <div className="div_kurs">
-            <img className='logo_vyvod_popolnit' src='./img/logo_kurs_valut.png'/>
-                    <div className='div_txt'>
-                    <h3>Курсы валют</h3>
-                    <p>Фиат</p>
-                    </div>
-            </div>
-            </Link>
+
         </div>
 
         <div className="div_text_info">

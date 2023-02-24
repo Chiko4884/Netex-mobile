@@ -9,7 +9,7 @@ function Popolnenie(){
     return(
         <div className="div_popolnenie">
         <Popolnenie_compon/>
-        <FooterTab className='foot'/>
+        <FooterTab/>
         </div>
         
     )

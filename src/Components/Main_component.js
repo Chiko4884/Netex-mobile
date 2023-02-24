@@ -77,14 +77,12 @@ return (
                 </div>
                
         <Link to='/popolnenie' className='btn_popolnenie'>  
-        <div className='div_vyvod1' > 
                 <img className='logo_vyvod_popolnit' src='./img/popolnit1.png'/>
                     <div className='div_txt'>
                     <h3>Пополнить</h3>
                     <p>Пополнить баланс</p>
                     </div>
-                    
-                </div></Link>
+        </Link>
             </div>
 
         </div>

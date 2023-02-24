@@ -1,12 +1,10 @@
 import React from 'react'
 import './wallets.scss'
-import { useNavigate } from "react-router"
 import { Link } from 'react-router-dom';
 import {walletsData} from './Datas/walletsData'
 
 function Wallets(){
 
-    const navigate = useNavigate();
 
 
     return (

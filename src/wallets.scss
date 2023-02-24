@@ -1,7 +1,5 @@
 @import './vars';
-$wh_: calc(428px/926px);
-$w_: 428px;
-$h_: 926px;
+
 
 *{
     margin: 0;
@@ -33,13 +31,13 @@ $h_: 926px;
     position: absolute ;
     background: #F9F9FF;
 .wallets_head{
-    width: 428px;
+    width: 100%;
     height: 36px;
     background: rgba(255, 255, 255, 0.01);
     // border: solid 0.1px red;
 }
 .under_head{
-    width: 428px;
+    width: 100%;
     height: 48px;
     text-align: center;
     display: flex;
@@ -95,14 +93,15 @@ h3{
 
 .div_wallets{
     width: 100%;
-    height: 210px;
+    // height: 210px;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between;
     padding: 16px;
     border-top: solid 1px rgba(#000000, $alpha: 0.2);
 .div_wallet{
-    width: 190px;
+    cursor: pointer;
+    width: 48%;
     height: 54px;
     display:inline-flex;
     flex-wrap: wrap;
@@ -114,15 +113,27 @@ h3{
     -5px -5px 10px rgba(255, 255, 255, 0.9), 
     5px 5px 13px rgba(220, 220, 220, 0.4);
     // border: solid 1px red;
+    @include breakpoint(w375){
+
+    }
     .div_txt_{
-        width: 125px;
+        width: 70%;
         height: 38px;
         display: flex;
         flex-direction: column;
         text-align: left;
-        // border: solid 1px;
+        // border: solid 1px red;
+        @include breakpoint(w375){
+            width: 73%;
+        }
+        @include breakpoint(w360){
+            width: 72%;
+        }
+        @include breakpoint(w320){
+            width: 68%;
+        }
         h3{
-            width: 51px;
+            width: 100%;
             height: 16px;
             font-family: 'Roboto', sans-serif;
             font-style: normal;
@@ -131,9 +142,13 @@ h3{
             line-height: 16px;
             color: #0D121F; 
             margin-bottom: 8px;
+        @include breakpoint(w320){
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
         }
         div{
-            width: 125px;
+            width: 100%;
             display: inline-flex;
             justify-content: space-between;
             // border: solid 1px red;
@@ -149,14 +164,26 @@ h3{
                 color: #0D121F;
                 opacity: 0.5;
                 // border: solid 0.1px blue;
+                @include breakpoint(w320){
+                    font-size: 10px;
+                }
             }
         }
     }
     img{
-        width: 38.9px;
+        width: 35px;
         height: 34px;
         float: right;
         margin-right: 8px;
+        @include breakpoint(w375){
+            margin-right: 4px;
+        }
+        @include breakpoint(w360){
+            margin-right: 4px;
+        }
+        @include breakpoint(w320){
+            margin-right: 2px;
+        }
     }
 }
 }

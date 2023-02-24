@@ -23,22 +23,23 @@
 }
 
 .div_footer{
-    width: 90%;
+    width: 92.6%;
     height: 58px;
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 12px;
+    padding: 2px;
     bottom: 10px;
     position: fixed;
     background: linear-gradient(135deg, #FFFFFF 0%, #F2F2F2 100%), #FFFFFF;
     border: 1px solid #FFFFFF;
     box-shadow: 0px 4px 41px rgba(0, 0, 0, 0.18);
     border-radius: 1000px;
-    margin-top: -10px;
-    margin-left: 16px;
-    margin-right: 16px;
+    // margin-top: -10px;
+    margin-left: 3.7%;
+    margin-right: 3.7%;
+    z-index: 1000;
     .div_footer_btns{
         width: 100%;
         display:inline-flex;
@@ -58,7 +59,6 @@
         display: inline-flex;
         text-align: center;
         justify-content: center;
-
         // padding-top: 8px;
         img{
             margin-left: 4px;

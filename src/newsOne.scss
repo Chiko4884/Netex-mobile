@@ -27,18 +27,18 @@ $h_: 926px;
 .news_container{
     margin-top: auto;
     width: 100%;
-    min-height: 100%;
+    height: 100vh;
     position: absolute ;
     background: #F9F9FF;
     // border: solid 1px red;
 .news_head{
-    width: 428px;
+    width: 100%;
     height: 36px;
     background: rgba(255, 255, 255, 0.01);
     // border: solid 0.1px red;
 }
 .under_head{
-    width: 428px;
+    width: 100%;
     height: 48px;
     text-align: center;
     display: flex;
@@ -106,7 +106,7 @@ h3{
         flex-direction: column;
         align-items: flex-start;
         padding: 0px;
-        width: 396px;
+        width: 100%;
         height: auto;
         background: #ffffff;
         box-shadow: -5px 5px 10px rgba(220, 220, 220, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(220, 220, 220, 0.4);

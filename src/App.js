@@ -20,6 +20,7 @@ function App(){
       return (
         <div>
             <Zastavka/>
+            {/* <Main_page/> */}
             <Routes>
                 <Route path='/' element= {<Auth_page/>}/>
                 <Route path='reg_page' element= {<Register_page/>}/>

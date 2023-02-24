@@ -1,8 +1,24 @@
+@import '../vars';
+
 *{
 
-    max-width: 430px;
+    max-width: 428px;
     box-sizing: border-box;
-   
+    @include breakpoint(w414){
+        max-width: 414px;
+    }
+    @include breakpoint(w393){
+        max-width: 393px;
+    }
+    @include breakpoint(w375){
+        max-width: 375px;
+    }
+    @include breakpoint(w360){
+        max-width: 360px;
+    }
+    @include breakpoint(w320){
+        max-width: 320px;
+    }
 }
 
 .div_variantt{
@@ -16,7 +32,7 @@
     // border: solid 1px red;
     .div_fiat_var{
         cursor: pointer;
-        width: 392px;
+        width: 100%;
         height: 54px;
         display:inline-flex;
         padding: 8px;

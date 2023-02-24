@@ -1,12 +1,9 @@
 @import './vars';
-$wh_: calc(428px/926px);
-$w_: 428px;
-$h_: 926px;
+
 *{
     margin: 0;
     padding: 0;
     max-width: 428px;
-    // max-height: 932;
     box-sizing: border-box;
     @include breakpoint(w414){
         max-width: 414px;
@@ -27,12 +24,12 @@ $h_: 926px;
 
 .main_container{
     width: 100%;
-    min-height: 100%;
-    // height: 350px ;
+    min-height: 100vh;
+    // height: 350px;
     background: #0D121F;
     // border: solid 1px red;
     // white-space: nowrap;
     overflow: hidden;
-    padding-bottom: 20px;
+    // padding-bottom: 20px;
 }
 

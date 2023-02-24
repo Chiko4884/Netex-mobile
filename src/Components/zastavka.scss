@@ -1,7 +1,5 @@
 @import '../vars';
-$wh_: calc(428px/926px);
-$w_: 428px;
-$h_: 926px;
+
 
 *{
     margin: 0;
@@ -29,12 +27,12 @@ $h_: 926px;
     margin: auto;
     position: absolute;
     width: 100%;
-    min-height: 100%;
-    box-sizing: content-box;
+    height: 100vh;
+    // box-sizing: content-box;
     background-color: #0D121F;
-    display: table;
+    display: flex;
     // padding-bottom: 386.81px;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 .logo{

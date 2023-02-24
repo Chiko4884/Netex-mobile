@@ -1,7 +1,5 @@
 @import './vars';
-$wh_: calc(428px/926px);
-$w_: 428px;
-$h_: 926px;
+
 *{
     margin: 0;
     padding: 0;
@@ -27,13 +25,13 @@ $h_: 926px;
 .news_container{
     margin-top: auto;
     width: 100%;
-    min-height: 100%;
-    height: 926px;
-    position: absolute ;
+    // min-height: 100%;
+    // height: 926px;
+    position: absolute;
     background: #F9F9FF;
     // border: solid 0.1px red;
 .news_head{
-    width: 428px;
+    width: 100%;
     height: 36x;
     background: rgba(255, 255, 255, 1);
     // position: fixed;
@@ -43,12 +41,12 @@ $h_: 926px;
 // box-shadow: 0px 1px 0px rgba(0, 0, 0, 1);
 }
 .under_head{
-    width: 428px;
+    width: 100%;
     height: 48px;
     text-align: center;
     justify-content: start;
     // flex-direction: column;
-    align-items: start;
+    // align-items: start;
     padding-top: 16px;
     // position: fixed;
     background: rgba(255, 255, 255, 1);
@@ -96,6 +94,12 @@ h3{
     line-height: 19px;
     color: #111111;
     // border: solid 0.1px red;
+    @include breakpoint(w320){
+        text-align: center;
+     }
+    @include breakpoint(w360){
+       text-align: center;
+    }
 }
 
 }
@@ -103,10 +107,10 @@ h3{
 
 
 .div_news{
-    width: 396px;
-    min-height: 100%;
+    width: 100%;
+    // min-height: 100%;
     padding: 16px;
-    // overflow: hidden;
+    overflow: hidden;
     // margin-top: 36px;
     .div_new{
         cursor: pointer;
@@ -114,13 +118,14 @@ h3{
         flex-direction: column;
         align-items: flex-start;
         padding: 0px;
-        width: 396px;
-        height: 205px;
+        width: 100%;
+        // height: 205px;
         background: #FFFFFF;
         box-shadow: -5px 5px 10px rgba(220, 220, 220, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(220, 220, 220, 0.4);
         border-radius: 16px;
         // border: solid 1px red;
         overflow: hidden;
+        margin-bottom: 16px;
         p{
             display: none;
         }
