@@ -7,7 +7,7 @@ function VariantNalichka(){
     return(
         <div className="div_variantt">
             {nalichkaVar.map((item) => (
-            <div className='div_nalichka_var'>
+            <div key={item.id} className='div_nalichka_var'>
             <img className='logo_' src={item.icon}/>
                 <div className='div_txt'>
                 <h3>{item.title}</h3>

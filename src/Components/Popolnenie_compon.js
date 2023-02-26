@@ -6,18 +6,15 @@ import { ReactComponent as Cripto_svg } from "../svg/sposob_cripto2.svg";
 import { ReactComponent as Fiat_svg } from "../svg/sposob_fiat2.svg";
 import { ReactComponent as Terminal_svg } from "../svg/sposob_terminal2.svg";
 import { ReactComponent as Nalichka_svg } from "../svg/sposob_nalichka2.svg";
-
 import VariantCripto from "./VariantCripto";
 import VariantFiat from "./VariantFiat";
 import VariantTerminal from "./VariantTerminal";
 import VariantNalichka from "./VariantNalichka";
-
-import  clickCriptoTitle from './VariantCripto';
-import  clickCriptoText from './VariantCripto';
+import UserComponentCurr from "./UserComponentCurr";
 
 
 function Popolnenie_compon(){
-    const [checkedVariant, SetCheckedVariant] = useState(VariantCripto);
+    const [clickedVariant, SetClickedVariant] = useState(<VariantCripto/>);
 
 
     return(
@@ -28,52 +25,8 @@ function Popolnenie_compon(){
                 to="/main_page">Назад</Link>
             <h3>Пополнение</h3>
         </div>
-        <div className='user_div_pop'>
-            <div className='div_name_balance'>
-                <div className='div_name'>
-                    <h3>Artem Konkin</h3>
-                    <p>temakonkin@gmail.com</p>
-                </div>
-                <div className='separator'></div>
-                <div className='div_balance'>
-                    <div className='bal'>
-                    <h3>Ваш баланс</h3>
-                    <p>0.000000</p>
-                    </div>
-                    <img className='logo_tether' src='./img/tetherIcon1.png'/>
-                </div>
-            </div>
-
-            <div className='div_vyvod_popolnit'>
-
-                <div className='div_vyvod1'>
-                <img className='logo_vyvod_popolnit' src='./img/vyvod1.png'/>
-                    <div className='div_txt'>
-                    <h3>Вывод</h3>
-                    <p>Вывод на карту</p>
-                    </div>
-                </div>
-               
-                <div className='div_vyvod1' > 
-                <img className='logo_vyvod_popolnit' src='./img/popolnit1.png'/>
-                    <div className='div_txt'>
-                    <h3>Пополнить</h3>
-                    <p>Пополнить баланс</p>
-                    </div>
-                    
-                </div>
-                <Link to='/currency_rates' className ='link_cur_rates'>
-           
-           <img className='logo_vyvod_popolnit' src='./img/logo_kurs_valut.png'/>
-                   <div className='div_txt'>
-                   <h3>Курсы валют</h3>
-                   <p>Фиат</p>
-                   </div>
-          
-           </Link>
-            </div>
-
-        </div>
+        <UserComponentCurr/>
+    
 
         <div className="div_text_info">
             <h3>Пополнить баланс</h3>
@@ -89,7 +42,7 @@ function Popolnenie_compon(){
 
         <div className="div_sposob">
             <input className="btns" type="radio" id="ar1" name="check-ar" 
-            onChange={()=>{SetCheckedVariant(VariantCripto) }}  defaultChecked />
+            onChange={()=>{SetClickedVariant(<VariantCripto/>) }}  defaultChecked />
             <label className="lbl" htmlFor="ar1">
             <div className="fon_svg"><Cripto_svg className='svg' width='10' height='16'/></div>
             <div className='div_txt_func'>
@@ -97,11 +50,12 @@ function Popolnenie_compon(){
             <p>Криптовалюты</p>
             </div>
             </label>
+
         </div>
 
         <div className="div_sposob">
             <input className="btns" type="radio" id="ar2" name="check-ar" 
-            onChange={()=>{SetCheckedVariant(VariantFiat) }}  />
+            onChange={()=>{SetClickedVariant(<VariantFiat/>) }}  />
             <label className="lbl" htmlFor="ar2">
             <div className="fon_svg"><Fiat_svg className='svg' width='16' height='16'/></div>
             <div className='div_txt_func'>
@@ -113,7 +67,7 @@ function Popolnenie_compon(){
 
         <div className="div_sposob">
             <input className="btns" type="radio" id="ar3" name="check-ar" 
-            onChange={()=>{SetCheckedVariant(VariantTerminal) }}  />
+            onChange={()=>{SetClickedVariant(<VariantTerminal/>) }}  />
             <label className="lbl" htmlFor="ar3">
             <div className="fon_svg"><Terminal_svg className='svg' width='16' height='16'/></div>
             <div className='div_txt_func'>
@@ -125,7 +79,7 @@ function Popolnenie_compon(){
 
         <div className="div_sposob">
             <input className="btns" type="radio" id="ar4" name="check-ar" 
-            onChange={()=>{SetCheckedVariant(VariantNalichka) }}  />
+            onChange={()=>{SetClickedVariant(<VariantNalichka/>) }}  />
             <label className="lbl" htmlFor="ar4">
             <div className="fon_svg"><Nalichka_svg className='svg' width='16' height='16'/></div>
             <div className='div_txt_func'>
@@ -142,7 +96,7 @@ function Popolnenie_compon(){
             <h1>Доступные варианты</h1>
         </div>
             {/* способы пополнения */}
-        {checkedVariant} 
+        {clickedVariant} 
 
         </div>
     </div>

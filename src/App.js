@@ -7,7 +7,6 @@ import ConfirmRegis from "./Components/ConfirmRegis";
 import { ForgotPassModal } from "./Components/ForgotPassModal";
 import Zastavka from './Components/Zastavka';
 import { Register_page } from "./Register_page";
-import FormCodeInput from './Components/FormCodeInput';
 import Main_page from './Main_page';
 import Wallets from './Wallets';
 import News from './News';
