@@ -32,7 +32,7 @@ let clickedCripto  = (e)=> {
 const { register, handleSubmit, formState: { isValid }}=useForm({
     mode: 'onBlur'
 })
-const onSubmit = (data) => {console.log(data)};
+const onSubmit = () => {console.log({criptoAddress})};
     return(
 
         <div className="div_variantt">

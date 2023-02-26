@@ -23,13 +23,13 @@ function UserComponent(){
 
         <div className='div_vyvod_popolnit'>
 
-            <div className='btn_vyvod'>
+            <Link to='/vyvod' className='btn_vyvod'>
             <img className='logo_vyvod_popolnit' src='./img/vyvod1.png'/>
                 <div className='div_txt'>
                 <h3>Вывод</h3>
                 <p>Вывод на карту</p>
                 </div>
-            </div>
+            </Link>
            
     <Link to='/popolnenie' className='btn_popolnenie'>  
             <img className='logo_vyvod_popolnit' src='./img/popolnit1.png'/>

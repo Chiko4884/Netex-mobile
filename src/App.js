@@ -13,6 +13,7 @@ import News from './News';
 import NewsOne from './NewsOne';
 import Popolnenie from './Popolnenie';
 import CurrencyRates from './Components/CurrencyRates';
+import Vyvod from './Vyvod';
 
 function App(){
       return (
@@ -29,6 +30,7 @@ function App(){
                 <Route path='news' element= {<News/>}/>
                 <Route path='news_one' element= {<NewsOne/>}/>
                 <Route path='popolnenie' element= {<Popolnenie/>}/>
+                <Route path='vyvod' element= {<Vyvod/>}/>
                 <Route path='currency_rates' element = {<CurrencyRates/>}/>
             </Routes>
         </div>

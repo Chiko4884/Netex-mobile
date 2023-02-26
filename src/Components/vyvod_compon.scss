@@ -1,0 +1,199 @@
+@import '../vars';
+
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 428px;
+    box-sizing: border-box;
+    @include breakpoint(w414){
+        max-width: 414px;
+    }
+    @include breakpoint(w393){
+        max-width: 393px;
+    }
+    @include breakpoint(w375){
+        max-width: 375px;
+    }
+    @include breakpoint(w360){
+        max-width: 360px;
+    }
+    @include breakpoint(w320){
+        max-width: 320px;
+    }
+}
+.korobka_vyvod{
+    width: 100%;
+    height: 100vh;
+    // height: auto;
+    overflow: hidden;
+    position: relative;
+    background: #F9F9FF;
+    // padding: 16px;
+    // border: solid 0.1px red;
+    @include breakpoint(w393){
+        height: 120vh;
+    }
+    @include breakpoint(w375){
+        height: 150vh;
+    }
+    @include breakpoint(w360){
+        height: 130vh;
+    }
+    @include breakpoint(w320){
+        height: 170vh;
+    }
+
+}
+.vyvod_head{
+    width: 100%;
+    height: 36x;
+    background: rgba(255, 255, 255, 1);
+    // position: fixed;
+    padding-top: 36px;
+    // border: solid 0.1px red;
+    // background: rgba(255, 255, 255, 1);
+    // box-shadow: 0px 1px 0px rgba(0, 0, 0, 1);
+}
+.under_head{
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    padding-top: 16px;
+    background: rgba(255, 255, 255, 1);
+    // border: solid 0.1px red;
+    margin-bottom: 16px;
+    .back_main{
+        cursor: pointer;
+        width: 100px;
+        height: 19px;
+        margin-left: 16px;
+        margin-right: 16px;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #111111;
+        text-decoration: none;
+        // border: solid 0.1px red;
+        padding-left: 16px;
+        position: relative;
+        &::before{
+            content: "";
+            width: 8px;
+            height: 8px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 16px;
+            border:  solid 1px #111111;
+            border-width: 3px 0px 0px 3px;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            position: absolute;
+            left: 8%;
+            top: 43%;
+    }}
+    h3{
+        width: 164px;
+        height: 19px;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #111111;
+        // border: solid 0.1px red;
+    }
+}
+
+
+.div_inp_monety{
+    width: 92vw;
+    // height: 89px;
+    // border: solid 1px red;
+    position: relative;
+    // top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:16px;
+    margin: 16px;
+    // border: solid 1px red;
+    h1{
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        color: #111111;
+        margin-bottom: 4px;
+    }
+    p{
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        color: #111111;
+        opacity: 0.5;
+        margin-bottom: 16px;
+    }
+    input{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        gap: 10px;
+        height: 48px;
+        background: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        border-radius: 12px;
+        flex: none;
+        order: 2;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+    img{
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: 25px;
+        bottom: 31px;
+    }
+}
+.div_h1{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px;
+    gap: 10px;
+    width: 100%;
+    height: 32px;  
+    background: #F9F9FF;
+    box-shadow: inset 0px -1px 0px rgba(49, 49, 49, 0.25);
+    h1{
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #000000;
+        opacity: 0.2;
+    }
+}
+
+

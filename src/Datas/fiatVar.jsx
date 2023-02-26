@@ -5,7 +5,7 @@ export const fiatVar = [
         "icon": "./img/visa_master.png",
         "title": "VISA/RUB",
         "desc": "Оплата картой",
-        "procent": "10.00%",
+        "procent": '10.00',
         "valuta": "RUB",
     },
     {
@@ -13,7 +13,7 @@ export const fiatVar = [
         "icon": "./img/usd_advcash.png",
         "title": "USD",
         "desc": "Advcash",
-        "procent": "10.00%",
+        "procent": '10.00',
         "valuta": "USD",
     },
     {
@@ -21,7 +21,7 @@ export const fiatVar = [
         "icon": "./img/visa_master.png",
         "title": "VISA/USD",
         "desc": "Оплата картой",
-        "procent": "2.00%",
+        "procent": '2.00',
         "valuta": "USD",
     },
 ]
