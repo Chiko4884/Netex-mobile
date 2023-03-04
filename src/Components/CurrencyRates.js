@@ -19,7 +19,7 @@ function CurrencyRates(){
         <div className="div_search">
             <h3>Пополнить баланс</h3>
             <input className="search_input" />
-            <img className="search_img" src="./img/search_sign.png"/>
+            <img className="search_img" src="../img/search_sign.png"/>
         </div>
 
 

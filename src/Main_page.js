@@ -1,18 +1,31 @@
 import React from 'react'
 import './main_page.scss'
-import FooterTab from './Components/FooterTab';
 import Main_component from './Components/Main_component';
+import {useNavigate} from 'react-router-dom'
+import { useEffect } from 'react';
+
+
 
 function Main_page(){
+    const navigate = useNavigate()
 
-return (
-    <div className="main_container">
-        <Main_component/>
-        <FooterTab/>
-    </div>
+        useEffect(() => {
+            if (localStorage.getItem('user') == null){
+                navigate('/auth_page')
+            }
+        }, [])
     
+
+return   (
+    
+    <div className="main_container">
+
+        <Main_component/>
+    
+    </div>
+
   
     )
-}
 
+}
 export default Main_page;

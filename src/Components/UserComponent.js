@@ -1,15 +1,17 @@
 import React from "react";
+import { useContext } from "react";
 import { Link } from 'react-router-dom';
-import './userComponent.scss';
+import { CustomContext } from "../Context";
+import './userComponentCurr.scss';
 
 function UserComponent(){
-
+    const {user, SetUser} = useContext(CustomContext)
     return(
         <div className='user_block'>
         <div className='div_name_balance'>
             <div className='div_name'>
-                <h3>Artem Konkin</h3>
-                <p>temakonkin@gmail.com</p>
+                <h3>{user.name} {user.lastname}</h3>
+                <p>{user.email}</p>
             </div>
             <div className='separator'></div>
             <div className='div_balance'>

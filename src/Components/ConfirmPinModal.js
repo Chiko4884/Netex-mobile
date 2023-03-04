@@ -15,7 +15,7 @@ function ConfirmPinModal(){
     const { handleSubmit, formState: { errors, isValid }, formState}=useForm({
         mode: 'onBlur'
 })
-    const onSubmit = data => {console.log(digits); navigate("/")};
+    const onSubmit = data => {console.log(digits); navigate("/auth_page")};
 
     return(
         <div className="div_modal_conf" >

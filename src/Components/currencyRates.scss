@@ -24,16 +24,18 @@
 .korobka_currency{
     // margin-top: auto;
     width: 100vw;
-    height: 100vh;
+    // height: auto;
+    height: 110vh;
     // height: 868px;
     position: relative;
     background: #F9F9FF;
     // border: solid 0.1px red;
+    z-index: 1100;
 .pop_head{
     width: 100%;
     height: 36x;
     background: rgba(255, 255, 255, 1);
-    // position: fixed;
+    position: relative;
     padding-top: 36px;
     // border: solid 0.1px red;
 //     background: rgba(255, 255, 255, 1);
@@ -112,7 +114,7 @@
     .search_img{
         position: absolute;
         top: 153px;
-        right: 30px;
+        right: 40px;
     }
     h3{
         width: 396px;
@@ -131,7 +133,7 @@
 
 .div_dostupn_var_currency{
     width: 100%;
-    height: 233px;
+    height: auto;
     // display: flex;
     // border: solid 1px rgb(16, 49, 1,  56);
     // margin-top: 16px;
@@ -159,9 +161,7 @@
         }
 
     }
-    .link_cur_rates{
-        text-decoration: none;
-    }
+
     .div_rates{
         width: 100%;
         height: auto;
@@ -173,7 +173,7 @@
         // border: solid 1px red;
         .div_rates_var{
             cursor: pointer;
-            width: 392px;
+            width: 91.5vw;
             height: 54px;
             display:inline-flex;
             padding: 8px;

@@ -1,17 +1,46 @@
-import React, { useState } from 'react'
-import Auth_page from './Auth_page';
+import React, { useState, useContext } from 'react'
 import './register_page.scss'
 import { useForm } from 'react-hook-form'; 
 import { useNavigate } from "react-router"
-// import { Regis } from './Components/Regis'
 import { Link } from 'react-router-dom';
+import axios, { Axios } from 'axios';
+import  {Context, CustomContext}  from './Context';
 
 function Register_page(){
+    const [email, SetEmail] = useState('')
+    const navigate = useNavigate();
+    const {user, SetUser} = useContext(CustomContext)
+
+    const registerUser = (e) => {
+        // e.preventDefault()
+        let newUser ={
+            name: e.name,
+            lastname: e.lastname,
+            email: e.email,
+            password: e.password
+        }
+         axios.post("http://localhost:3030/register", newUser)
+        .then(({data}) => 
+        {
+            SetUser( {
+                token: data.accessToken,
+                ...data.user
+            })
+            // localStorage.setItem('user', JSON.stringify({
+            //     token: data.accessToken,
+            //     ...data.user
+            // }))
+
+        }
+        )
+        .catch((err) => console.log(err.message))
+    }
+    // console.log(user)
     const {register, handleSubmit,formState:{ errors, isValid }, formState}=useForm({
         mode: 'onBlur'
     })
-    const navigate = useNavigate();
-    const onSubmit = data => {console.log(data); navigate('/confirm_regis')};
+
+    const onSubmit = data => {console.log(data); {registerUser(data)}; navigate('/confirm_regis')}; //
     
     const [toggleIconState1, SetToggleIconState1] = useState(false)
     const togglePass1  = () => {
@@ -25,13 +54,13 @@ function Register_page(){
     
     const [checked, setChecked] = useState(false);
     
-    const [checkPass, setCheckPass] = useState()
+
     return (
     <div className="register_container">
         <div className='register_head'> </div>
         <div className='under_head'>
         <Link className='back_auth'
-                to="/">Назад</Link>
+                to="/auth_page">Назад</Link>
             <h3>Регистрация</h3>
         </div>
         <img className='B_foto' src= './img/B-img.png'/>

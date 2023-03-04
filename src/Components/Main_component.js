@@ -7,12 +7,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {dataImageNews} from '../Datas/dataImageNews'
 import {funcData} from '../Datas/funcData'
-import { useNavigate } from "react-router"
 import UserComponent from './UserComponent';
 
 function Main_component(){
-    // const navigate = useNavigate();
-    
+
     const settings = {
         dots: true,
         infinite: true,
@@ -34,7 +32,7 @@ function Main_component(){
         ]
       };
 
-return (
+return  (
 
         <div className='korobka_main'>
         <div className='main_head'> </div>
@@ -61,7 +59,7 @@ return (
                 <div className='div_slide_news'>
          <Slider className='slideStyle' {...settings}>
                {dataImageNews.map((item) => (
-                <div className='div_slider'>
+                <div key={item.id} className='div_slider'>
                      <img className='slide_img' src={item.image} alt={item.id}/>
                      <h1>{item.header}</h1>
                 </div>
@@ -71,7 +69,7 @@ return (
             </div>
             <div className='div_func'>
             {funcData.map((item) => (
-            <div className='div_func1'>
+            <div key={item.id} className='div_func1'>
                     <img src={item.image} alt={item.name_coin}/>
                     <div className='div_txt_func'>
                         <h3>{item.title}</h3>
@@ -84,7 +82,7 @@ return (
                 <div className='div_z'>
                     <h3>Ваши кошельки</h3>
                     <Link className='link-forgot'
-                to="/wallets"><p className="open_wallets">Посмотреть всё</p></Link>
+                to="wallets"><p className="open_wallets">Посмотреть всё</p></Link>
                 
                 </div>
                 <div className='div_bin_bit'>
@@ -111,6 +109,7 @@ return (
     
   
     )
+    
 }
 
 export default Main_component;

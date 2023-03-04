@@ -22,7 +22,7 @@ function Popolnenie_compon(){
         <div className='pop_head'> </div>
         <div className='under_head'>
         <Link className='back_main'
-                to="/main_page">Назад</Link>
+                to="/">Назад</Link>
             <h3>Пополнение</h3>
         </div>
         <UserComponentCurr/>

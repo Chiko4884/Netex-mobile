@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './footerTab.scss'
 import { useNavigate } from "react-router"
+import Main_component from './Main_component';
 
 
 function FooterTab(){
@@ -10,20 +11,20 @@ function FooterTab(){
         
     <div className='div_footer'>
     <div className="div_footer_btns">
-        <input className="btns_foot" type="radio" id="foot1" name="check-foot"  defaultChecked/> 
-        <label className="lbl-foot" htmlFor="foot1"><img src='./img/domik_logo.png'/><p>Главная</p></label>
+        <NavLink className="link_foot" 
+         to='/'> <img src='./img/domik_logo.png'/><p>Главная</p></NavLink>
         
-        <input className="btns_foot" type="radio" id="foot2" name="check-foot" />
-        <label className="lbl-foot" htmlFor="foot2"><img src='./img/vyvod_logo.png'/><p>Вывод</p></label>
+        <NavLink className="link_foot" 
+         to='vyvod'> <img src='./img/vyvod_logo.png'/><p>Вывод</p></NavLink>
 
-        <input className="btns_foot" type="radio" id="foot3" name="check-foot" />
-        <label className="lbl-foot" htmlFor="foot3"><img src='./img/torgolya_logo.png'/><p>Торговля</p></label>
+        <NavLink className="link_foot" 
+         to='popolnenie'> <img src='./img/torgolya_logo.png'/><p>Торговля</p></NavLink>
 
-        <input className="btns_foot" type="radio" id="foot4" name="check-foot" />
-        <label className="lbl-foot" htmlFor="foot4"><img src='./img/history_logo.png'/><p>История</p></label>
+        <NavLink className="link_foot" 
+         to='history'> <img src='./img/history_logo.png'/><p>История</p></NavLink>
 
-        <input className="btns_foot" type="radio" id="foot5" name="check-foot" />
-        <label className="lbl-foot" htmlFor="foot5"><img src='./img/profile_logo.png'/><p>Профиль</p></label>
+        <NavLink className="link_foot" 
+         to='profile'> <img src='./img/profile_logo.png'/><p>Профиль</p></NavLink>
 
     </div>
 </div>

@@ -13,7 +13,7 @@ function Wallets(){
         <div className='wallets_head'> </div>
         <div className='under_head'>
         <Link className='back_main'
-                to="/main_page">Назад</Link>
+                to="/">Назад</Link>
             <h3>Кошельки</h3>
         </div>
 <WalletComponent/>

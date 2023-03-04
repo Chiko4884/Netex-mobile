@@ -28,7 +28,7 @@ const toggleNalichkaPop= () => {
                 <div className='div_line'></div>
                     <h3 className="nal_title"> Для оплаты <br/>"Оплата наличными"</h3>
                     <p>Вам необходимо связаться с нами по WhatsApp</p>
-                    <a href='https://wa.me/+996755147800?text=Здравствуйте%2C+у+меня+есть+вопрос' title="WhatsApp" target='_blank'>+996 508 24 11 11</a>
+                    <a href='https://wa.me/+996508241111?text=Здравствуйте%2C+у+меня+есть+вопрос' title="WhatsApp" target='_blank'>+996 508 24 11 11</a>
                     <button
                     className="btn_nal" 
                     onClick={toggleNalichkaPop}

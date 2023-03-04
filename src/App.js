@@ -1,6 +1,6 @@
 
-import React, { useState, useEffect } from 'react'
-import {Routes, Route} from 'react-router-dom';
+import React from 'react'
+import {Routes, Route, useLocation} from 'react-router-dom';
 import Auth_page from "./Auth_page";
 import { ConfirmPinModal } from "./Components/ConfirmPinModal";
 import ConfirmRegis from "./Components/ConfirmRegis";
@@ -14,25 +14,38 @@ import NewsOne from './NewsOne';
 import Popolnenie from './Popolnenie';
 import CurrencyRates from './Components/CurrencyRates';
 import Vyvod from './Vyvod';
+import Profile from './Profile';
+import History from './History';
+import FooterTab from './Components/FooterTab';
+
 
 function App(){
+  const location = useLocation()
       return (
         <div>
           <Zastavka/>
             <Routes>
-                <Route path='/' element= {<Auth_page/>}/>
-                <Route path='reg_page' element= {<Register_page/>}/>
-                <Route path="forgot" element={<ForgotPassModal/>}/>
-                <Route path="enter_pin" element= {<ConfirmPinModal/>}/>
-                <Route path="confirm_regis" element= {<ConfirmRegis/> }/>
-                <Route path='/main_page' element={<Main_page/>}/>
-                <Route path='wallets' element= {<Wallets/>} />
-                <Route path='news' element= {<News/>}/>
-                <Route path='news_one' element= {<NewsOne/>}/>
-                <Route path='popolnenie' element= {<Popolnenie/>}/>
-                <Route path='vyvod' element= {<Vyvod/>}/>
-                <Route path='currency_rates' element = {<CurrencyRates/>}/>
+                <Route path='/auth_page' element= {<Auth_page/>}/>
+                <Route path='/reg_page' element= {<Register_page/>}/>
+                <Route path="/forgot" element={<ForgotPassModal/>}/>
+                <Route path="/enter_pin" element= {<ConfirmPinModal/>}/>
+                <Route path="/confirm_regis" element= {<ConfirmRegis/> }/>
+
+                <Route path='/' element={<Main_page/>}/>
+                <Route path='/wallets' element= {<Wallets/>} />
+                <Route path='/news/:id' element= {<NewsOne/>}/>
+                <Route path='/news' element= {<News/>}/>
+                <Route path='/popolnenie/:currency_rates' element = {<CurrencyRates/>}/>
+                <Route path='/popolnenie' element= {<Popolnenie/>}/>
+                <Route path='/vyvod' element= {<Vyvod/>}/>
+                <Route path='/profile' element= {<Profile/>}/>
+                <Route path='/history' element= {<History/>} />
             </Routes>
+         {location.pathname == '/' || 
+          location.pathname == '/vyvod' ||
+          location.pathname == '/popolnenie' ||
+          location.pathname == '/history' ||
+          location.pathname == '/profile' ? <FooterTab/> : ''}
         </div>
 
       );

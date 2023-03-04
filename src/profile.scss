@@ -1,0 +1,34 @@
+@import './vars';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 428px;
+    // max-height: 932px;
+    box-sizing: border-box;
+    @include breakpoint(w414){
+        max-width: 414px;
+    }
+    @include breakpoint(w393){
+        max-width: 393px;
+    }
+    @include breakpoint(w375){
+        max-width: 375px;
+    }
+    @include breakpoint(w360){
+        max-width: 360px;
+    }
+    @include breakpoint(w320){
+        max-width: 320px;
+    }
+}
+.div_popolnenie{
+
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    // position: absolute ;
+    background: #F9F9FF;
+    // border: solid 0.1px red;
+}

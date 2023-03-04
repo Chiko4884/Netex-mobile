@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "email": "achs24@mail.ru",
+      "password": "$2a$10$k5b3lvBcZz2pIWY5f1MHGOkZTZi/MUKbwF9dI.329o.0ln.Du59Ji",
+      "name": "Chyngyz",
+      "lastname": "Chyngyz",
+      "id": 1
+    },
+    {
+      "email": "achs@mail.ru",
+      "password": "$2a$10$YfN0sRwQGz8fEIubxCMd1.Wo/BfEbhe8YrL53pzEYTQegsg20d1cu",
+      "name": "Chyngyz",
+      "lastname": "Chyngyz",
+      "id": 2
+    },
+    {
+      "email": "temakonkin@mail.ru",
+      "password": "$2a$10$mYVcNapMKSKTd0qMNgf0MOtBrYmBMBKfCnKPYnxVtwXhg1fCOrZg2",
+      "name": "Artem",
+      "lastname": "Konkin",
+      "id": 3
+    },
+    {
+      "email": "achs28_84@mail.ru",
+      "password": "$2a$10$BGwkWs0Bhk9xH0FQOn59/Ot/x3mMuq3VwpI9LG1rpM2rwmk7bsowG",
+      "name": "Chyngyz",
+      "lastname": "Chyngyz",
+      "id": 4
+    },
+    {
+      "email": "aliza@mail.ru",
+      "password": "$2a$10$OH03tjvw79ZXhSTB1IWoZ.patAjDam5GltubiJ11HRYO7wjHncG0S",
+      "name": "Aliza",
+      "lastname": "Sagynychbekova",
+      "id": 5
+    },
+    {
+      "email": "amir@mail.ru",
+      "password": "$2a$10$6Zdm.VH4IaPzww0O11fYcuvlJmiKFwPm9Lo3T5H/nvl1F0wXhdm5a",
+      "name": "amir",
+      "lastname": "S",
+      "id": 6
+    }
+  ]
+}

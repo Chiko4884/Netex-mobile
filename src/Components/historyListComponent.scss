@@ -1,0 +1,174 @@
+@import '../vars';
+
+*{
+
+    max-width: 428px;
+    box-sizing: border-box;
+    @include breakpoint(w414){
+        max-width: 414px;
+    }
+    @include breakpoint(w393){
+        max-width: 393px;
+    }
+    @include breakpoint(w375){
+        max-width: 375px;
+    }
+    @include breakpoint(w360){
+        max-width: 360px;
+    }
+    @include breakpoint(w320){
+        max-width: 320px;
+    }
+}
+
+.history_list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding: 16px;
+    .history_item{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        // align-items: flex-start;
+        padding: 16px;
+        gap: 8px;
+        width: 100%;
+        height: 72px;
+        background: #FFFFFF;
+        box-shadow: -5px 5px 10px rgba(220, 220, 220, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(220, 220, 220, 0.4);
+        border-radius: 16px;
+        margin-bottom: 16px;
+        .icon_title_type_status{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: 16px;
+            // border: solid 0.1px red;
+            .icon_title{
+                width: 200px;
+                height: 15.5em;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                .logo_hist{
+                    width: 47px;
+                    height: 15px;
+                    margin-right: 8px;
+                    }
+                h3{
+                    width: fit-content;
+                    height: 16px;
+                    font-family: 'Roboto',sans-serif;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #000000;
+                }
+            }
+            .op-type_status{
+                width: 100%;
+                height: 15.5em;
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                h6{
+                    width: fit-content;
+                    height: 16px;
+                    font-family: 'Roboto',sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #0D121F;
+                    margin-right: 8px;
+                } 
+                img{
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+        }
+        .prihod_rashod{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .prihod{
+                width: 100%;
+                height: 15.5em;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                p{
+                    width: fit-content;
+                    height: 16px;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #000000;
+                    opacity: 0.5;
+                    margin-right: 8px;
+                }
+                h6{
+                    width: fit-content;
+                    height: 16px;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #000000;
+                }
+
+            }
+            .rashod{
+                width: 100%;
+                height: 15.5em;
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                p{
+                    width: fit-content;
+                    height: 16px;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #000000;
+                    opacity: 0.5;
+                    margin-right: 8px;
+                }
+                h5{
+                    width: fit-content;
+                    height: 16px;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #000000;
+                    margin-right: 8px;
+                }
+                h6{
+                    width: fit-content;
+                    height: 16px;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #000000;
+                }
+            }
+        }
+    }
+}

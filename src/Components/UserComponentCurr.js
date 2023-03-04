@@ -1,15 +1,17 @@
 import React from "react";
+import { useContext } from "react";
 import { Link } from 'react-router-dom';
+import { CustomContext } from "../Context";
 import './userComponentCurr.scss';
 
 function UserComponentCurr(){
-
+    const {user, SetUser} = useContext(CustomContext)
     return(
         <div className='user_block'>
         <div className='div_name_balance'>
             <div className='div_name'>
-                <h3>Artem Konkin</h3>
-                <p>temakonkin@gmail.com</p>
+            <h3>{user.name} {user.lastname}</h3>
+                <p>{user.email}</p>
             </div>
             <div className='separator'></div>
             <div className='div_balance'>
@@ -21,7 +23,7 @@ function UserComponentCurr(){
             </div>
         </div>
 
-        <div className='div_vyvod_popolnit_kurs'>
+        <div className='div_vyvod_popolnit'>
 
             <div className='btn_vyvod'>
             <img className='logo_vyvod_popolnit' src='./img/vyvod1.png'/>
@@ -39,7 +41,7 @@ function UserComponentCurr(){
                 </div>
     </Link>
 
-    <Link to='/currency_rates' className ='link_cur_rates'>
+    <Link to='currency' className ='link_cur_rates'>
            <img className='logo_vyvod_popolnit' src='./img/logo_kurs_valut.png'/>
                    <div className='div_txt'>
                    <h3>Курсы валют</h3>

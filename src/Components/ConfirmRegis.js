@@ -16,13 +16,13 @@ function ConfirmRegis(){
     const { handleSubmit, formState: { errors, isValid }, formState}=useForm({
         mode: 'onBlur'
 })
-const onSubmit = data => {console.log(digits); navigate("/")};
+const onSubmit = data => {console.log(digits); navigate("/auth_page")};
     return(
         <div className="register_container">
         <div className='register_head'> </div>
         <div className='under_head'>
         <Link className='back_auth'
-                to="/">Назад</Link>
+                to="auth_page">Назад</Link>
             <h3>Регистрация</h3>
         </div>
         <img className='B_foto' src= './img/B-img.png'/>

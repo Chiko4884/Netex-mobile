@@ -14,7 +14,7 @@ function Vyvod_compon(){
         <div className='vyvod_head'> </div>
         <div className='under_head'>
         <Link className='back_main'
-                to="/main_page">Назад</Link>
+                to="/">Назад</Link>
             <h3>Вывод</h3>
         </div>
         <UserComponent/>

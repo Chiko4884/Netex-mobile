@@ -1,27 +1,31 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
+import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, HashRouter } from 'react-router-dom';
 import App from './App';
 import NotSupport from './Components/NotSupport'
+import  {Context}  from './Context';
 
 const winInnerWidth = window.innerWidth
 
 if (winInnerWidth > 430) {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <HashRouter>
+    <BrowserRouter>
     <NotSupport/>
-    </HashRouter>
+     </BrowserRouter>
 )
   }
+
 else {
-  const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <BrowserRouter>
-  <HashRouter>
-    <App/>
-  </HashRouter>
-  // </BrowserRouter>
+  <BrowserRouter> 
+<Context>
+  <App/>
+</Context>
+</BrowserRouter> 
+
 )
 }
 

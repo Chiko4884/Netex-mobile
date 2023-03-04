@@ -1,18 +1,40 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './auth_page.scss'
 import { useForm, NavLink } from 'react-hook-form'; 
 import { Link } from 'react-router-dom';
 import { ForgotPassModal } from "./Components/ForgotPassModal";
 import { useNavigate } from "react-router"
-
+import { CustomContext } from './Context';
+import axios, { Axios } from 'axios';
 
 function Auth_page(){
     const { register, handleSubmit, formState: { errors, isValid }, formState}=useForm({
         mode: 'onBlur'
 })
 const navigate = useNavigate();
-
-    const onSubmit = data => {console.log(data); navigate('/main_page')};
+const {user, SetUser} = useContext(CustomContext)
+const loginUser = (e) => {
+    let aUser ={
+        email: e.email,
+        password: e.password
+    }
+     axios.post("http://localhost:3030/login", aUser)
+    .then(({data}) => 
+    {
+        SetUser( {
+            token: data.accessToken,
+            ...data.user
+        })
+        localStorage.setItem('user', JSON.stringify({
+            token: data.accessToken,
+            ...data.user
+        }))
+        navigate('/')
+    }
+    )
+    .catch((err) => console.log(err.message))
+}
+    const onSubmit = data => {console.log(data); {loginUser(data)}};
 
     const [toggleIconState, SetToggleIconState] = useState(false)
     const togglePass  = () => {
@@ -90,7 +112,7 @@ const navigate = useNavigate();
         <div className="div_no_acc_reg">
         <h5 className="no_account">Еще нет аккаунта?</h5>
         <Link className='link-reg'
-                to="./reg_page"><h6 className="register">зарегистрироваться</h6></Link>
+                to="/reg_page"><h6 className="register">зарегистрироваться</h6></Link>
         </div>
 
     </form>

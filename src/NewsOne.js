@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './newsOne.scss'
 import { useNavigate } from "react-router"
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import {dataImageNews} from './Datas/dataImageNews'
 import {clickNewsId} from './News'
 import {clickNewsImage} from './News'
@@ -11,6 +11,7 @@ import {clickNewsContent} from './News'
 function NewsOne(){
 
     const navigate = useNavigate();
+
     return (
     <div className="news_container">
         <div className='news_head'> </div>

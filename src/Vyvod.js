@@ -9,7 +9,6 @@ function Vyvod(){
     return(
         <div className="div_vyvod">
         <Vyvod_compon/>
-        <FooterTab/>
         </div>
         
     )
