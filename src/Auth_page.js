@@ -11,6 +11,7 @@ function Auth_page(){
     const { register, handleSubmit, formState: { errors, isValid }, formState}=useForm({
         mode: 'onBlur'
 })
+
 const navigate = useNavigate();
 const {user, SetUser} = useContext(CustomContext)
 const loginUser = (e) => {
@@ -18,7 +19,8 @@ const loginUser = (e) => {
         email: e.email,
         password: e.password
     }
-     axios.post("http://localhost:3030/login", aUser)
+
+    axios.post("http://localhost:3030/login", aUser)
     .then(({data}) => 
     {
         SetUser( {
@@ -67,6 +69,7 @@ const loginUser = (e) => {
             }
         } )}
         placeholder = 'temakonkin@gmail.com'
+        defaultValue=''
         className='inp_email'
         />
             {errors?.email && (

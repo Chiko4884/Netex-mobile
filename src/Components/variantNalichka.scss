@@ -112,7 +112,7 @@
     bottom: 0;
     top: 0;
     position: fixed;
-    z-index: 10000;
+    z-index: 20000000;
     // border: solid 1px red;
 }
 .container_nal_popolnenie{
@@ -129,7 +129,7 @@
     background: #F8F8FE;
     border-radius: 24px;
     // border: solid 1px red;
-    z-index: 200000;
+    z-index: 30000000;
 
 
 .div_line{
@@ -199,6 +199,7 @@ text-decoration: none;
         height: 56px;
         background: #FFE400;
         border-radius: 12px;
+        border: none;
     
         font-family: 'Roboto', sans-serif;
         font-style: normal;

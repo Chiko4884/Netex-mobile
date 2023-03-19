@@ -11,20 +11,20 @@ const winInnerWidth = window.innerWidth
 if (winInnerWidth > 430) {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
+    <HashRouter>
     <NotSupport/>
-     </BrowserRouter>
+     </HashRouter>
 )
   }
 
 else {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter> 
+  <HashRouter> 
 <Context>
   <App/>
 </Context>
-</BrowserRouter> 
+</HashRouter> 
 
 )
 }

@@ -4,19 +4,16 @@ import { useNavigate } from "react-router"
 import './vyvod_compon.scss';
 import UserComponent from "./UserComponent";
 import VariantCripto from "./VariantCripto";
-import WalletComponent from "./WalletComponent";
+import WalletComponentVyvod from "./WalletComponentVyvod";
+import HeaderComponent from "./HeaderComponent";
 
 
 function Vyvod_compon(){
 
     return(
         <div className="korobka_vyvod">
-        <div className='vyvod_head'> </div>
-        <div className='under_head'>
-        <Link className='back_main'
-                to="/">Назад</Link>
-            <h3>Вывод</h3>
-        </div>
+<HeaderComponent title = 'Вывод'/>
+<div className="vyvod_body">
         <UserComponent/>
     
         <div className="div_inp_monety">
@@ -30,9 +27,9 @@ function Vyvod_compon(){
         <div className="div_h1">
             <h1>Доступные варианты</h1>
         </div>
-        <WalletComponent/>
+        <WalletComponentVyvod/>
 
-
+        </div>
         
     </div>
 

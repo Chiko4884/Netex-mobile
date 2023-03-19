@@ -1,10 +1,11 @@
 import React, { useState, useContext } from 'react'
 import './register_page.scss'
-import { useForm } from 'react-hook-form'; 
+import { useForm, useWatch } from 'react-hook-form'; 
 import { useNavigate } from "react-router"
 import { Link } from 'react-router-dom';
 import axios, { Axios } from 'axios';
 import  {Context, CustomContext}  from './Context';
+import HeaderComponent from './Components/HeaderComponent';
 
 function Register_page(){
     const [email, SetEmail] = useState('')
@@ -17,7 +18,7 @@ function Register_page(){
             name: e.name,
             lastname: e.lastname,
             email: e.email,
-            password: e.password
+            password: e.password,
         }
          axios.post("http://localhost:3030/register", newUser)
         .then(({data}) => 
@@ -26,21 +27,17 @@ function Register_page(){
                 token: data.accessToken,
                 ...data.user
             })
-            // localStorage.setItem('user', JSON.stringify({
-            //     token: data.accessToken,
-            //     ...data.user
-            // }))
 
         }
         )
         .catch((err) => console.log(err.message))
     }
     // console.log(user)
-    const {register, handleSubmit,formState:{ errors, isValid }, formState}=useForm({
+    const {register, handleSubmit,formState:{ errors, isValid }, getValues, watch, formState}=useForm({
         mode: 'onBlur'
     })
 
-    const onSubmit = data => {console.log(data); {registerUser(data)}; navigate('/confirm_regis')}; //
+    const onSubmit = data => { registerUser(data); navigate('/confirm_regis')}; //
     
     const [toggleIconState1, SetToggleIconState1] = useState(false)
     const togglePass1  = () => {
@@ -57,12 +54,7 @@ function Register_page(){
 
     return (
     <div className="register_container">
-        <div className='register_head'> </div>
-        <div className='under_head'>
-        <Link className='back_auth'
-                to="/auth_page">Назад</Link>
-            <h3>Регистрация</h3>
-        </div>
+<HeaderComponent title = 'Регистрация'/>
         <img className='B_foto' src= './img/B-img.png'/>
         {/* <Regis className='import_register'/> */}
 <form onSubmit={handleSubmit(onSubmit)} className='regis_form'>
@@ -141,14 +133,9 @@ function Register_page(){
     <h3>Повторите пароль</h3>
     <input {...register ('password2', {
         required: 'Повторите пароль!',
-        minLength: {
-            value: 8,
-            message: 'Не менее 8 символов!'
-        }
-        // pattern: {
-        //     value: {password},
-        //     message: 'Пароли не совпадают'
-        // }
+        validate: (value) => {
+            return watch('password') === value  || "Пароли не совпадают";
+          }
     } )}
     type= {toggleIconState2 ? 'text' : 'password' }
     className='inp_password' 

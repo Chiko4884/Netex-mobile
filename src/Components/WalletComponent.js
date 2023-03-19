@@ -9,13 +9,14 @@ function WalletComponent(){
 
     return (
 
-        <div className='div_wallets'>
+        <div className='block_wallets'>
             {walletsData.map((item) => (
             <div className='div_wallet' key={item.id}>
             <img className='logo_binance' src={item.icon}/>
                 <div className='div_txt_'>
                 <h3>{item.title}</h3>
-               <div> <p>{item.price}</p> <p>{item.word_sign}</p></div>
+               <div> <p>{Number(item.price).toFixed(8)}</p> 
+               <p>{item.word_sign}</p></div>
                 </div>
         </div>
             ))}

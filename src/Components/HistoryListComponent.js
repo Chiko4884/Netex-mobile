@@ -17,13 +17,57 @@ function HistoryListComponent(){
         if (e == 'blocked'){
           return '../img/oper_blocked.png' 
         }
-
     }
+
+    const [paymentToggle, setPaymentToggle] = useState(false)
+    const toggleFunc= () => {
+        setPaymentToggle(!paymentToggle)
+    }
+
+
+    let [payType, SetPayType] = useState()
+    let [payDate, SetPayDate] = useState()
+    let [payTime, SetPayTime] = useState()
+    let [payRashod, SetPayRashod] = useState()
+    let [payPrihod, SetPayPrihod] = useState()
+    let [payValuta, SetPayValuta] = useState()
+    let [payKomis, SetPayKomis] = useState()
+    let [payRekvisit, SetPayRekvisit] = useState()
+    let [payNote, SetPayNote] = useState()
+    let [payStatus, SetPayStatus] = useState()
+if (payStatus == 'completed'){
+    SetPayStatus('Завершено')
+}
+if (payStatus == 'not_completed'){
+    SetPayStatus('Не завершено')
+}
+if (payStatus == 'blocked'){
+    SetPayStatus('Заблокировано')
+}
+    
+        
+let clickedPayment  = (e)=> {
+    SetPayType(e.oper_type);
+    SetPayDate(e.date);
+    SetPayTime(e.time);
+    SetPayRashod(Number(e.rashod).toFixed(2));
+    SetPayPrihod(Number(e.prihod).toFixed(2));
+    SetPayValuta(e.valuta)
+    SetPayKomis(Number(e.komissiya).toFixed(2));
+    SetPayStatus(e.status)
+    SetPayRekvisit(e.rekvisit)
+    SetPayNote(e.note)
+    SetPayNote(e.note + 'на сумму "' + e.rashod*88 + ' ' + 'СОМ' +
+    '", реквизит "' + e.rekvisit + '"')
+
+    setPaymentToggle(!paymentToggle)   
+}
+    
 
     return(
         <div className="history_list">
                         {historyData.map((item) => (
-            <div key={item.id} className='history_item' > 
+            <div key={item.id} className='history_item' onClick= {() => {clickedPayment(item)}}> 
 <div className="icon_title_type_status">
     <div className="icon_title">  <img className='logo_hist' src={item.icon} alt='visa'/> <h3>{item.title}</h3> </div>
     <div className="op-type_status"> <h6>{item.oper_type}</h6> <img className="status_icon" src={DrawStatus(item.status)} alt='status' /> </div>
@@ -34,6 +78,34 @@ function HistoryListComponent(){
 </div>
         </div>
             ))}
+
+{paymentToggle && 
+                <div className="payment_toggle">
+                <div className='div_line'></div>
+                   
+                 <h3 className="payment_title">Квитанция об оплате</h3>
+                    
+                <div className="payment_datas">
+<div className="pay_list"> <h5>Тип операции:</h5>   <h6>{payType}</h6> </div>
+<div className="pay_list"> <h5>Дата и время:</h5>   <h6>{payDate} {payTime}</h6> </div>
+<div className="pay_list"> <h5>Сумма к списанию:</h5>   <div className="pay_div2"><h6>{payRashod}</h6> <p> {payValuta}</p> </div> </div>
+<div className="pay_list"> <h5>Комиссия:</h5>   <div className="pay_div2"><h6>{payKomis} </h6> <p> {payValuta}</p> </div> </div>
+<div className="pay_list"> <h5>Валюта:</h5>   <p> {payValuta}</p> </div>
+<div className="pay_list"> <h5>Статус:</h5>   <p> {payStatus}</p> </div>
+                </div>
+<h3>Реквизит</h3>
+<div className="div_rekvisit"> <p>{payRekvisit}</p> 
+        <img src="./img/copy_sign.png"  onClick={() =>  navigator.clipboard.writeText(payRekvisit)}/> </div>
+
+<h3>Примечание</h3>
+<div className="div_note"> <p>{payNote}</p> 
+        <img src="./img/copy_sign.png" onClick={() =>  navigator.clipboard.writeText(payNote)}/> </div>
+
+<button className="btn_close_pay" onClick={toggleFunc}>Закрыть</button>
+                </div>
+    }
+{paymentToggle &&  <div onClick={toggleFunc} className="back_blur_pay">  </div>}
+
         </div>
 
     )

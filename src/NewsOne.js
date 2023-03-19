@@ -7,6 +7,7 @@ import {clickNewsId} from './News'
 import {clickNewsImage} from './News'
 import {clickNewsHeader} from './News'
 import {clickNewsContent} from './News'
+import HeaderComponent from './Components/HeaderComponent';
 
 function NewsOne(){
 
@@ -14,12 +15,7 @@ function NewsOne(){
 
     return (
     <div className="news_container">
-        <div className='news_head'> </div>
-        <div className='under_head'>
-        <Link className='back_main'
-                to="/news">Назад</Link>
-            <h3>Новости</h3>
-        </div>
+<HeaderComponent title = 'Новости'/>
 
         <div className='div_news'>
             

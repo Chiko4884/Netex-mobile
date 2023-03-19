@@ -9,7 +9,7 @@
     },
     {
       "email": "achs@mail.ru",
-      "password": "$2a$10$YfN0sRwQGz8fEIubxCMd1.Wo/BfEbhe8YrL53pzEYTQegsg20d1cu",
+      "password": "$2a$10$KzppXegkjP7iW9AQbABuk.O9TkcsmS/RDqJV7Uw0yR7Bbvr2qF7j2",
       "name": "Chyngyz",
       "lastname": "Chyngyz",
       "id": 2
@@ -23,10 +23,16 @@
     },
     {
       "email": "achs28_84@mail.ru",
-      "password": "$2a$10$BGwkWs0Bhk9xH0FQOn59/Ot/x3mMuq3VwpI9LG1rpM2rwmk7bsowG",
+      "password": "$2a$10$HKe2YChG4urdgp98JG2TPuQNXNtLflF0XAy2dR9hlCery9CKOXA9C",
       "name": "Chyngyz",
-      "lastname": "Chyngyz",
-      "id": 4
+      "lastname": "Akimzhanov",
+      "id": 4,
+      "birthday": "1984-06-28",
+      "noPassport": "ID101010",
+      "noInn": "22806198410103",
+      "city": "Bishkek",
+      "address": "Prigirod",
+      "country": "Кыргызстан"
     },
     {
       "email": "aliza@mail.ru",
@@ -41,6 +47,201 @@
       "name": "amir",
       "lastname": "S",
       "id": 6
+    },
+    {
+      "email": "asa@mail.ru",
+      "password": "$2a$10$uDoFhJbqcm30sL/Al3Ssc.ExS8dKig.rqCrestJ3fxs0pDQnHgWUq",
+      "name": "asa11",
+      "lastname": "asad11",
+      "id": 7,
+      "birthday": "2020-01-01",
+      "noPassport": "111111",
+      "noInn": "1111222222",
+      "city": "osh",
+      "address": "street",
+      "country": "Кыргызстан"
+    },
+    {
+      "email": "qq@qq.qq",
+      "password": "$2a$10$wxxCuYK3vfRBWKDgAmLToehzxjmzZ87q5Ywmp0YF49fCE3SEPldSu",
+      "name": "qq12",
+      "lastname": "qqq12",
+      "birthday": "2020-02-01",
+      "noPassport": "01010101",
+      "noInn": "02020202",
+      "city": "Osh",
+      "address": "Lenin st",
+      "country": "Кыргызстан",
+      "id": 8
+    },
+    {
+      "email": "sam@mail.ru",
+      "password": "$2a$10$9h1AXN9yEzRu/NgnNfPJ5e.FSc5XvVlYOOv5uIC9DKNplKYl2mfnO",
+      "name": "Sam12",
+      "lastname": "Johnson12",
+      "birthday": "2021-03-03",
+      "noPassport": "id12121212",
+      "noInn": "121212121212",
+      "city": "Bishkek",
+      "address": "Prigirod",
+      "country": "Кыргызстан",
+      "id": 9
+    },
+    {
+      "email": "aidina@mail.ru",
+      "password": "$2a$10$jLkNwCQom5iHUrENOlgqU.b0.uc9g2H1BEbAbwW0zflseFa3zcfEG",
+      "name": "Aydina",
+      "lastname": "Chyngyzova",
+      "birthday": "2020-07-04",
+      "noPassport": "id0000111",
+      "noInn": "0101010101",
+      "city": "Бишкек",
+      "address": "1-мая 29",
+      "country": "Кыргызстан",
+      "id": 10
+    },
+    {
+      "email": "qw@qw.qw",
+      "password": "$2a$10$4xRNqnFaw6Bwy7bQCTPXg.e1OVPe5m8kYP8ayN3C37BzTQY0Yb5VS",
+      "name": "qwqw12",
+      "lastname": "qwqwqw12",
+      "id": 11,
+      "birthday": "2020-02-02",
+      "noPassport": "ss000000",
+      "noInn": "010101010101",
+      "city": "ОШ",
+      "address": "Street",
+      "country": "Кыргызстан"
+    },
+    {
+      "email": "ss@ss.ss",
+      "password": "$2a$10$LWu2oUh52CaoLWfWmFBwyueJeI/KM5zoZfqF9rKFGBhp2qa7GHX0e",
+      "name": "ss",
+      "lastname": "sss",
+      "id": 12
+    }
+  ],
+  "verifydatausers": [
+    {
+      "name": "Chyngyz11",
+      "lastname": "Chyngyz11",
+      "birthday": "2021-11-11",
+      "noPassport": "111111",
+      "noInn": "2222222222",
+      "city": "bish",
+      "address": "prig",
+      "userId": 2,
+      "country": "Алжир",
+      "image1": "blob:http://localhost:3000/54b21d50-2f35-4d31-bbed-4356df319523",
+      "image2": "blob:http://localhost:3000/4f599b04-38c6-456d-ad3e-ad136195c3f2",
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "name": "Chyngyz1",
+      "lastname": "Chyngyz1111",
+      "birthday": "2020-02-02",
+      "noPassport": "11111",
+      "noInn": "22222222",
+      "city": "q",
+      "address": "q",
+      "userId": 2,
+      "country": "Кыргызстан",
+      "image1": "blob:http://localhost:3000/76553559-c525-4a92-9d00-b34906385905",
+      "image2": "blob:http://localhost:3000/f04ebb2f-48ba-431a-b652-4842a8b0c23f",
+      "id": 3
+    },
+    {
+      "name": "Chyngyz1",
+      "lastname": "Chyngyz1111",
+      "birthday": "2020-02-02",
+      "noPassport": "11111",
+      "noInn": "22222222",
+      "city": "q",
+      "address": "q",
+      "userId": 2,
+      "country": "Кыргызстан",
+      "image1": "blob:http://localhost:3000/76553559-c525-4a92-9d00-b34906385905",
+      "image2": "blob:http://localhost:3000/f04ebb2f-48ba-431a-b652-4842a8b0c23f",
+      "id": 4
+    },
+    {
+      "name": "Chyngyz1",
+      "lastname": "Chyngyz1111",
+      "birthday": "2020-02-02",
+      "noPassport": "11111",
+      "noInn": "22222222",
+      "city": "q",
+      "address": "q",
+      "userId": 2,
+      "country": "Кыргызстан",
+      "image1": "blob:http://localhost:3000/76553559-c525-4a92-9d00-b34906385905",
+      "image2": "blob:http://localhost:3000/f04ebb2f-48ba-431a-b652-4842a8b0c23f",
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "name": "Chyngyz111",
+      "lastname": "Chyngyz111",
+      "birthday": "2015-12-12",
+      "noPassport": "1111",
+      "noInn": "22222222",
+      "city": "qqqqq",
+      "address": "qqqqq",
+      "userId": 2,
+      "country": "Кыргызстан",
+      "image1": "blob:http://localhost:3000/51a0b7c1-3ecb-44bd-ab67-335a219ed145",
+      "image2": "blob:http://localhost:3000/bb22c844-c8ef-46df-b6bd-3c2e17d92f3d",
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "name": "Chyngyz122",
+      "lastname": "Chyngyz222",
+      "birthday": "2021-11-11",
+      "noPassport": "11111",
+      "noInn": "222233333",
+      "city": "Биш",
+      "address": "Советская",
+      "userId": 2,
+      "country": "Кыргызстан",
+      "image1": "blob:http://localhost:3000/92ce9487-cc2f-4f6e-b783-270a225bf3ff",
+      "image2": "blob:http://localhost:3000/4a60dd48-dc39-4870-b83f-254a2ecad84c",
+      "id": 9
+    },
+    {
+      "name": "Chyngyz222222222",
+      "lastname": "Chyngyz2222222",
+      "birthday": "2012-12-12",
+      "noPassport": "111111",
+      "noInn": "222222",
+      "city": "Ош",
+      "address": "Масалиев",
+      "userId": 2,
+      "country": "Кыргызстан",
+      "image1": "blob:http://localhost:3000/c46243e0-9761-4ffb-aeea-666e1e400191",
+      "image2": "blob:http://localhost:3000/f955a6dc-51fa-46e5-b6a1-bd021af88b64",
+      "id": 10
+    },
+    {
+      "name": "Chyngyz",
+      "lastname": "Chyngyz",
+      "birthday": "2020-11-11",
+      "noPassport": "11111111",
+      "noInn": "22222222",
+      "city": "111",
+      "address": "222",
+      "userId": 2,
+      "country": "Кыргызстан",
+      "image1": "blob:http://localhost:3000/d3e2710d-ec3a-427d-885b-b6885760506f",
+      "image2": "blob:http://localhost:3000/913369df-23ec-45b1-8a57-e73996375b82",
+      "id": 11
     }
   ]
 }

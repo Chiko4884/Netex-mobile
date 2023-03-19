@@ -11,6 +11,7 @@ import VariantFiat from "./VariantFiat";
 import VariantTerminal from "./VariantTerminal";
 import VariantNalichka from "./VariantNalichka";
 import UserComponentCurr from "./UserComponentCurr";
+import HeaderComponent from "./HeaderComponent";
 
 
 function Popolnenie_compon(){
@@ -19,12 +20,8 @@ function Popolnenie_compon(){
 
     return(
             <div className="korobka_popolnenie">
-        <div className='pop_head'> </div>
-        <div className='under_head'>
-        <Link className='back_main'
-                to="/">Назад</Link>
-            <h3>Пополнение</h3>
-        </div>
+<HeaderComponent title = 'Пополнение'/>
+<div className="popolnenie_body">
         <UserComponentCurr/>
     
 
@@ -98,6 +95,7 @@ function Popolnenie_compon(){
             {/* способы пополнения */}
         {clickedVariant} 
 
+        </div>
         </div>
     </div>
 

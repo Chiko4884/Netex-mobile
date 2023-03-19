@@ -3,6 +3,7 @@ import './wallets.scss'
 import { Link } from 'react-router-dom';
 import {walletsData} from './Datas/walletsData'
 import WalletComponent from './Components/WalletComponent';
+import HeaderComponent from './Components/HeaderComponent';
 
 function Wallets(){
 
@@ -10,14 +11,10 @@ function Wallets(){
 
     return (
     <div className="wallets_container">
-        <div className='wallets_head'> </div>
-        <div className='under_head'>
-        <Link className='back_main'
-                to="/">Назад</Link>
-            <h3>Кошельки</h3>
+        <HeaderComponent title = 'Кошельки'/>
+       <div className='body_wallets'>
+        <WalletComponent/>
         </div>
-<WalletComponent/>
-
     </div>
     )
 }

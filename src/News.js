@@ -3,6 +3,7 @@ import './news.scss'
 import { useNavigate } from "react-router-dom"
 import { Link } from 'react-router-dom';
 import {dataImageNews} from './Datas/dataImageNews'
+import HeaderComponent from './Components/HeaderComponent';
 
 export let clickNewsId;
 export let clickNewsImage;
@@ -27,12 +28,7 @@ function News(){
  
     return (
     <div className="news_container">
-        <div className='news_head'> </div>
-        <div className='under_head'>
-        <Link className='back_main'
-                to="/">Назад</Link>
-            <h3>Новости</h3>
-        </div>
+<HeaderComponent title = 'Новости' />
 
         <div className='div_news'>
             {dataImageNews.map((item) => (

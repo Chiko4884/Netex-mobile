@@ -375,7 +375,9 @@ border-top-left-radius: 24px;
 
 .div_wallets{
     width: 100%;
+    border-top: solid 1px rgba(#000000, $alpha: 0.2);
     // border: solid 1px red;
+    padding-top: 16px;
     .div_z{
         width: 100%;
         // height: 21px;

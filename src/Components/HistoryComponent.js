@@ -7,12 +7,20 @@ import WalletComponent from "./WalletComponent";
 import Select from 'react-select';
 import { type } from "@testing-library/user-event/dist/type";
 import HistoryListComponent from "./HistoryListComponent";
+import HeaderComponenent from './HeaderComponent'
 
 const options = [
     { value: '1', label: 'Все операции' },
     { value: '2', label: 'Пополнение' },
-    { value: '3', label: 'Покупка' },
-    { value: '4', label: 'Блокировка' },
+    { value: '3', label: 'Возврат' },
+    { value: '4', label: 'Покупка' },
+    { value: '5', label: 'Продажа' },
+    { value: '6', label: 'Вывод' },
+    { value: '7', label: 'Блокировка' },
+    { value: '8', label: 'Перевод' },
+    { value: '9', label: 'Обмен' },
+    { value: '10', label: 'Оплата' },
+    { value: '11', label: 'Депозит' },
   ];
 
 function HistoryComponent(){
@@ -20,12 +28,8 @@ function HistoryComponent(){
       const [selectedOption, setSelectedOption] = useState(null);
     return(
         <div className="korobka_history">
-        <div className='history_head'> </div>
-        <div className='under_head'>
-        <Link className='back_main'
-                to="/">Назад</Link>
-            <h3>История</h3>
-        </div>
+      <HeaderComponenent title = 'История' />
+      <div className="history_body">
         <div className="div_select">
         <Select className="select"
         defaultValue={selectedOption}
@@ -51,7 +55,7 @@ function HistoryComponent(){
             <h1>Список операций</h1>
         </div>
         <HistoryListComponent/>
-
+        </div>
     </div>
 
     )

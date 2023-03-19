@@ -1,0 +1,187 @@
+@import '../vars';
+
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 428px;
+    min-height: auto;
+    box-sizing: border-box;
+    @include breakpoint(w414){
+        max-width: 414px;
+    }
+    @include breakpoint(w393){
+        max-width: 393px;
+    }
+    @include breakpoint(w375){
+        max-width: 375px;
+    }
+    @include breakpoint(w360){
+        max-width: 360px;
+    }
+    @include breakpoint(w320){
+        max-width: 320px;
+    }
+}
+
+.korobka_contacts{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+.body_contacts{
+    position: absolute;
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: auto;
+    margin-top: 16px;
+    top: 84px;
+    display: flex;
+    flex-direction: column;
+    // background: #F9F9FF;
+    .cont_logo{
+        width: 97px;
+        height: 108px;
+        position: relative;
+        // top: 84px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        left: calc(50% - 48px);
+    }
+}
+.contacts{
+    width: 100%;
+    // top: 84px;
+    height: auto;
+    position: relative;
+    // border: solid 1px red;
+    align-items: center;
+    // justify-content: center;
+    margin-bottom: 32px;
+    h1{
+        position: relative;
+        width: 100%;
+        height: 66px;
+        font-family: 'Roboto',sans-serif;
+        font-style: normal;
+        font-weight: 100;
+        font-size: 56px;
+        line-height: 66px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #111111;
+        opacity: 0.22;
+        // border: solid 1px red;
+
+    }
+    .item_contacts{
+        width: 100%;
+        height: 72px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        border-top: 1px solid rgba(0, 0, 0, 0.11);
+        .con_icon{
+            width: 24px;
+            height: 24px;
+            // border: solid 1px red;
+            position: relative;
+            margin: 8px;
+        }
+        .con_icon1{
+            width: 24px;
+            height: 20px;
+            // border: solid 1px red;
+            position: relative;
+            margin: 8px;
+        }
+        .con_icon2{
+            width: 21px;
+            height: 24px;
+            // border: solid 1px red;
+            position: relative;
+            margin: 8px;
+        }
+        .div_nom{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width:95%;
+            height: 40px;
+            // border: solid 1px red;
+            padding-left: 8px;
+            h3{
+                font-family: 'Roboto',sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+                margin-bottom: 8px;
+            }
+            p{
+                font-family: 'Roboto',sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+                opacity: 0.5;
+
+            }
+        }
+    }
+}
+
+.div_karta{
+    position: relative;
+    width: 100%;
+    top: 587px;
+    // bottom: 0;
+
+    .map{
+        width: 100%;
+        // top: 0;
+    }
+}
+
+.div_location{
+    width: 65%;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 8px;
+    position: absolute;
+    background: #FFFFFF;
+    left: 20px;
+    top: 20px;
+    box-shadow: -5px 5px 10px rgba(220, 220, 220, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(220, 220, 220, 0.4);
+    border-radius: 8px;
+    h3{
+        font-family: 'Roboto',sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+        margin-bottom: 2px;
+    }
+}

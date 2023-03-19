@@ -28,11 +28,6 @@ let clickedCripto  = (e)=> {
         setCriptoPopolnenie(!criptoPopolnenie)   
 }
 
-
-const { register, handleSubmit, formState: { isValid }}=useForm({
-    mode: 'onBlur'
-})
-const onSubmit = () => {console.log({criptoAddress})};
     return(
 
         <div className="div_variantt">
@@ -58,7 +53,7 @@ const onSubmit = () => {console.log({criptoAddress})};
                         <p>Если отправить криптовалюту на неверный адрес (например, биткойн на адрес Bitcoin Cash), криптовалюта будет потеряна</p>
                     </div>
     
-            <form onSubmit={handleSubmit(onSubmit)} >
+            <div  >
             <div className="block_txt_vyvod">
                     <h6>Минимальная сумма на вывод:</h6>
                     <p>0.000000</p> <p>{clickCriptoTitle}</p>
@@ -68,15 +63,15 @@ const onSubmit = () => {console.log({criptoAddress})};
                     </div>
                     <div className="block_address">
                     <h6>{clickCriptoText} Адрес</h6>
-                    <p className="cripto_address" {...register ('address_' )}>
+                    <p className="cripto_address">
                         {criptoAddress}</p>
                     </div>
                     <button
-                    className="submit_copy" 
-                    onClick={handleSubmit(onSubmit)}
-                    type="submit"> 
+                    className="btn_copy" 
+                    onClick={() =>  navigator.clipboard.writeText(criptoAddress)} 
+                    > 
                     <img src="./img/copy_sign.png"/> Скопировать адрес</button>
-            </form>
+            </div>
                 </div>
     }
        {criptoPopolnenie &&  <div onClick={toggleCriptoPop} className="back_blur">  </div>}

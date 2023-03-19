@@ -26,14 +26,16 @@
 }
 
 
-.div_wallets{
+.block_wallets{
     width: 100%;
-    // height: 210px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between;
     padding: 16px;
-    border-top: solid 1px rgba(#000000, $alpha: 0.2);
+    position: relative;
+    // top: 84px;
+    // border: solid 1px red;
 .div_wallet{
     cursor: pointer;
     width: 48%;

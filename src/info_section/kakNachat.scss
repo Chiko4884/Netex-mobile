@@ -1,0 +1,61 @@
+@import '../vars';
+
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 428px;
+    height: auto;
+    box-sizing: border-box;
+    @include breakpoint(w414){
+        max-width: 414px;
+    }
+    @include breakpoint(w393){
+        max-width: 393px;
+    }
+    @include breakpoint(w375){
+        max-width: 375px;
+    }
+    @include breakpoint(w360){
+        max-width: 360px;
+    }
+    @include breakpoint(w320){
+        max-width: 320px;
+    }
+}
+
+
+
+
+.korobka_kak{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+flex-direction: column;
+.logout{
+    display: none;
+}
+
+}
+.body_kak{
+    // padding: 16px;
+    position: relative;
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: auto;
+    top: 100px;
+
+    // border: solid 1px blue;
+}
+.div_video{
+    width: 100%;
+    height:fit-content;
+    // background: grey;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

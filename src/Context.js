@@ -19,6 +19,6 @@ export const Context = (props) => {
 
     return <CustomContext.Provider value = {{user, SetUser}}>
             {props.children}
-    </CustomContext.Provider>
+           </CustomContext.Provider>
 
 }

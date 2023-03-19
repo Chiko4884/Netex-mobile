@@ -17,6 +17,12 @@ import Vyvod from './Vyvod';
 import Profile from './Profile';
 import History from './History';
 import FooterTab from './Components/FooterTab';
+import VyvodNaKartu from './Components/VyvodNaKartu';
+import AboutService from './info_section/AboutService';
+import Faq from './info_section/Faq';
+import KakNachat from './info_section/KakNachat';
+import Contacts from './info_section/Contacts';
+import Verification from './ProfileSettings/Verification';
 
 
 function App(){
@@ -37,7 +43,13 @@ function App(){
                 <Route path='/news' element= {<News/>}/>
                 <Route path='/popolnenie/:currency_rates' element = {<CurrencyRates/>}/>
                 <Route path='/popolnenie' element= {<Popolnenie/>}/>
+                <Route path='/vyvod/:id' element={<VyvodNaKartu/>}/>
                 <Route path='/vyvod' element= {<Vyvod/>}/>
+                <Route path='/profile/about' element= {<AboutService/>}/>
+                <Route path='/profile/faq' element= {<Faq/>}/>
+                <Route path='/profile/kak_nachat' element= {<KakNachat/>}/>
+                <Route path='/profile/contacts' element= {<Contacts/>}/>
+                <Route path='/profile/verification' element= {<Verification/>}/>
                 <Route path='/profile' element= {<Profile/>}/>
                 <Route path='/history' element= {<History/>} />
             </Routes>
