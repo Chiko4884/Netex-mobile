@@ -119,6 +119,13 @@
       "name": "ss",
       "lastname": "sss",
       "id": 12
+    },
+    {
+      "email": "ee@ee.ee",
+      "password": "$2a$10$lRJp.cd0OcOx1/PBhVJJ3Oy.z890fepcAAvX3.h2kaPIQvv2rp1Pu",
+      "name": "eee",
+      "lastname": "eee",
+      "id": 13
     }
   ],
   "verifydatausers": [

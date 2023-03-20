@@ -150,8 +150,8 @@ function Register_page(){
         }
     </div>
 
-<div className="div_agree">
-<input onChange={() => setChecked(!checked)} className="chb_agree" defaultChecked type="checkbox" id="chek_id" name="user_agree"/>
+    <div className="div_agree">
+    <input onChange={() => setChecked(!checked)} className="chb_agree" defaultChecked type="checkbox" id="chek_id" name="user_agree"/>
             <label  className="agree_lbl" htmlFor="chek_id">
              Нажимая на кнопку “Регистрация” я принимаю условия
              <a href="" className="ssylka_agree" > Пользовательского соглашения</a>

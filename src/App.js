@@ -23,6 +23,10 @@ import Faq from './info_section/Faq';
 import KakNachat from './info_section/KakNachat';
 import Contacts from './info_section/Contacts';
 import Verification from './ProfileSettings/Verification';
+import HistoryAccount from './ProfileSettings/HistoryAccount';
+import Security from './ProfileSettings/Security';
+import TwoFactorAuth from './ProfileSettings/TwoFactorAuth';
+import SecurityEdit from './ProfileSettings/SecurityEdit';
 
 
 function App(){
@@ -50,6 +54,10 @@ function App(){
                 <Route path='/profile/kak_nachat' element= {<KakNachat/>}/>
                 <Route path='/profile/contacts' element= {<Contacts/>}/>
                 <Route path='/profile/verification' element= {<Verification/>}/>
+                <Route path='/profile/history_account' element= {<HistoryAccount/>}/>
+                <Route path='/profile/security/two_factor' element= {<TwoFactorAuth/>}/>
+                <Route path='/profile/security/edit' element= {<SecurityEdit/>}/>
+                <Route path='/profile/security' element= {<Security/>}/>
                 <Route path='/profile' element= {<Profile/>}/>
                 <Route path='/history' element= {<History/>} />
             </Routes>

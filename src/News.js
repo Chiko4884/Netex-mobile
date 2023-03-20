@@ -32,7 +32,9 @@ function News(){
 
         <div className='div_news'>
             {dataImageNews.map((item) => (
-            <div className='div_new' onClick={()=>{clickedNews(item); navigate(`${item.id}`)} } >
+            <div className='div_new' key={item.id}
+            onClick={()=>{clickedNews(item);
+             navigate(`${item.id}`)} } >
             <img className='news_img' src={item.image}/>
                 <div className='div_txt'>
                 <p>{item.id}</p> 
@@ -40,7 +42,6 @@ function News(){
                 </div>
              </div>
             ))}
-
             </div>
     </div>
     )

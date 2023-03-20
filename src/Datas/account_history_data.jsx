@@ -1,0 +1,66 @@
+export const history_acc_data = [
+
+    {
+        "id": 1,
+        "date": "2022/03/26 23:42",
+        "action": "Вход в личный кабинет",
+        "ip_address": '162.158.251.177',
+        "browser": 'Chrome browser',
+    },
+    {
+        "id": 2,
+        "date": "2022/03/26 23:42",
+        "action": "Вход в личный кабинет",
+        "ip_address": '162.158.251.177',
+        "browser": 'Firefox browser',
+    },
+    {
+        "id": 3,
+        "date": "2022/03/26 23:42",
+        "action": "Вход в личный кабинет",
+        "ip_address": '162.158.251.177',
+        "browser": 'Chrome browser',
+    },
+    {
+        "id": 4,
+        "date": "2022/03/26 23:42",
+        "action": "Вход в личный кабинет",
+        "ip_address": '162.158.251.177',
+        "browser": 'Chrome browser',
+    },
+    {
+        "id": 5,
+        "date": "2022/03/26 23:42",
+        "action": "Вход в личный кабинет",
+        "ip_address": '162.158.251.177',
+        "browser": 'Firefox browser',
+    },
+    {
+        "id": 6,
+        "date": "2022/03/26 23:42",
+        "action": "Вход в личный кабинет",
+        "ip_address": '162.158.251.177',
+        "browser": 'Chrome browser',
+    },
+    {
+        "id": 7,
+        "date": "2022/03/26 23:42",
+        "action": "Вход в личный кабинет",
+        "ip_address": '162.158.251.177',
+        "browser": 'Firefox browser',
+    },
+    {
+        "id": 8,
+        "date": "2022/03/26 23:42",
+        "action": "Вход в личный кабинет",
+        "ip_address": '162.158.251.177',
+        "browser": 'Chrome browser',
+    },
+    {
+        "id": 9,
+        "date": "2022/03/26 23:42",
+        "action": "Вход в личный кабинет",
+        "ip_address": '162.158.251.177',
+        "browser": 'Firefox browser',
+    },
+]

@@ -13,6 +13,7 @@ import 'react-image-upload/dist/index.css'
 
 function Verification(){
     const {user, SetUser} = useContext(CustomContext);
+
     let [verifDataUser, setVerifDataUser] = useState({})
 
     const [selectedImg1, setSelectedImg1] = useState(null)
@@ -252,6 +253,7 @@ function Verification(){
         </form>
 
             </div>
+ 
         </div>
     )
 }
