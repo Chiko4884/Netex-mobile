@@ -4,7 +4,6 @@ import {Routes, Route, useLocation} from 'react-router-dom';
 import Auth_page from "./Auth_page";
 import { ConfirmPinModal } from "./Components/ConfirmPinModal";
 import ConfirmRegis from "./Components/ConfirmRegis";
-import { ForgotPassModal } from "./Components/ForgotPassModal";
 import Zastavka from './Components/Zastavka';
 import { Register_page } from "./Register_page";
 import Main_page from './Main_page';
@@ -28,20 +27,18 @@ import Security from './ProfileSettings/Security';
 import TwoFactorAuth from './ProfileSettings/TwoFactorAuth';
 import SecurityEdit from './ProfileSettings/SecurityEdit';
 
-
 function App(){
   const location = useLocation()
       return (
         <div>
           <Zastavka/>
             <Routes>
+                <Route path='/' element={<Main_page/>}/>
                 <Route path='/auth_page' element= {<Auth_page/>}/>
                 <Route path='/reg_page' element= {<Register_page/>}/>
-                <Route path="/forgot" element={<ForgotPassModal/>}/>
                 <Route path="/enter_pin" element= {<ConfirmPinModal/>}/>
                 <Route path="/confirm_regis" element= {<ConfirmRegis/> }/>
 
-                <Route path='/' element={<Main_page/>}/>
                 <Route path='/wallets' element= {<Wallets/>} />
                 <Route path='/news/:id' element= {<NewsOne/>}/>
                 <Route path='/news' element= {<News/>}/>

@@ -2,17 +2,25 @@ import React, { useContext, useState } from 'react'
 import './auth_page.scss'
 import { useForm, NavLink } from 'react-hook-form'; 
 import { Link } from 'react-router-dom';
-import { ForgotPassModal } from "./Components/ForgotPassModal";
 import { useNavigate } from "react-router"
 import { CustomContext } from './Context';
 import axios, { Axios } from 'axios';
 
 function Auth_page(){
+    
+const navigate = useNavigate();
+    const [forgotState, setForgotState] = useState(false)
+    const [emailForPin, setEmailForPin] =useState('')
+    const handleInput = (event) =>{
+        setEmailForPin(event.target.value)
+    }
+    const toggleForgot= () => {
+        setForgotState(!forgotState)
+    }
     const { register, handleSubmit, formState: { errors, isValid }, formState}=useForm({
         mode: 'onBlur'
 })
 
-const navigate = useNavigate();
 const {user, SetUser} = useContext(CustomContext)
 const loginUser = (e) => {
     let aUser ={
@@ -31,12 +39,12 @@ const loginUser = (e) => {
             token: data.accessToken,
             ...data.user
         }))
-        navigate('/')
+
     }
     )
     .catch((err) => console.log(err.message))
 }
-    const onSubmit = data => {console.log(data); {loginUser(data)}};
+    const onSubmit = data => {console.log(data); {loginUser(data)}; navigate('/')}; //{loginUser(data)}; 
 
     const [toggleIconState, SetToggleIconState] = useState(false)
     const togglePass  = () => {
@@ -98,10 +106,8 @@ const loginUser = (e) => {
         <button type='button' onClick={togglePass} className="toggle_icon_close"/>
             {toggleIconState && 
                 <button type='button' onClick={togglePass} className="toggle_icon_open"/> 
-                
             }
         </div>
-
 
         <button 
         onClick={handleSubmit(onSubmit)}
@@ -111,6 +117,8 @@ const loginUser = (e) => {
             <p>ВОЙТИ В АККАУНТ</p>
         </button>
 
+        <h2 onClick={toggleForgot} 
+        className='open_forgot'>Забыл(а) пароль?</h2>
 
         <div className="div_no_acc_reg">
         <h5 className="no_account">Еще нет аккаунта?</h5>
@@ -119,10 +127,35 @@ const loginUser = (e) => {
         </div>
 
     </form>
-        <div className='link_forgot'>
-        <ForgotPassModal/>
         </div>
+
+        {forgotState && 
+     <div className="form_forgot_pass">
+       
+            <img className="img_" alt="forgot" src="./img/forgot_pass.png"/>
+                    <h3>Пароль</h3>
+                    <p>Мы отправим Вам на почту ссылку на изменение пароля</p>
+        <div className="div_email_forgot">    
+        <input 
+        onChange={handleInput}
+        placeholder = 'temakonkin@gmail.com'
+        className='inp_email_for_pin'
+        type='text'
+        />
         </div>
+
+        <button 
+        onClick={()=> {console.log(emailForPin); navigate("/enter_pin")}}
+        className="submit_btn_forgot" 
+        type="submit" 
+        id="btnSubmit"
+       >
+            <p>ОТПРАВИТЬ</p>
+        </button>
+                </div>
+}
+{forgotState &&  <div className="back_blur" onClick={toggleForgot}> </div> }
+
     </div>
     )
 }

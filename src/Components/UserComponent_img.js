@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { useContext } from "react";
 import { Link } from 'react-router-dom';
 import { CustomContext } from "../Context";
 import './userComponentCurr.scss';
 import './userComponent_img.scss';
+import { useEffect } from "react";
+import axios from "axios";
 
 function UserComponent_img(){
-    const {user, SetUser} = useContext(CustomContext)
+    const {user, SetUser, statusVerification, SetStatusVerification} = useContext(CustomContext)
+
+    useEffect(()=>{
+        const idCkeck = axios.get(`http://localhost:3030/verifydatausers/?userId=${user.id}`)
+        .then((res)=>{if (res.data.length != 0) {SetStatusVerification(true);console.log('user verified')}}
+        )
+        .catch((err) => console.log(err.message))
+    }, [])
+console.log(`http://localhost:3030/verifydatausers/?userId=${user.id}`)
+
     return(
         <div className='user_block'>
         <div className='div_name_balance'>
@@ -53,10 +64,12 @@ function UserComponent_img(){
         </div>
 
         <div className="div_verification">
-            <img src="./img/verific_ok.png"/>
+            {statusVerification && <img src="./img/verific_ok.png"/>}
+            {!statusVerification && <img src="./img/verific_not.png"/>}
             <div className="verif_txt">
                 <h1>Верификация аккаунта</h1>
-                <h3>Верифицирован</h3>
+                {statusVerification && <h3>Верифицирован</h3>}
+                {!statusVerification && <h3>Не верефицирован</h3>}
             </div>
         </div>
 

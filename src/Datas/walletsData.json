@@ -1,12 +1,11 @@
-export const walletsData = [
-
-    {
+ 
+ [{
         "id": 1,
         "icon": "./img/logo_binance.png",
         "title": "Binance",
         "price": 0,
         "word_sign": "BNB",
-        "available_coins": 0.06,
+        "available_coins": 0.06
     },
     {
         "id": 2,
@@ -14,7 +13,7 @@ export const walletsData = [
         "title": "Bitcoin",
         "price": 0,
         "word_sign": "BTC",
-        "available_coins": 0.06,
+        "available_coins": 10.63
     },
     {
         "id": 3,
@@ -22,7 +21,7 @@ export const walletsData = [
         "title": "Etherium",
         "price": 0,
         "word_sign": "ETH",
-        "available_coins": 0.06,
+        "available_coins": 100.56
     },
     {
         "id": 4,
@@ -30,7 +29,7 @@ export const walletsData = [
         "title": "Etherium",
         "price": 0,
         "word_sign": "ETH",
-        "available_coins": 0.06,
+        "available_coins":152.30
     },
     {
         "id": 5,
@@ -38,7 +37,7 @@ export const walletsData = [
         "title": "Tether",
         "price": 0,
         "word_sign": "USDT",
-        "available_coins": 0.06,
+        "available_coins": 12.35
     },
     {
         "id": 6,
@@ -46,7 +45,5 @@ export const walletsData = [
         "title": "Tether",
         "price": 0,
         "word_sign": "USDT",
-        "available_coins": 0.06,
-    },
-
-]
+        "available_coins": 1000.36
+    }]

@@ -11,7 +11,7 @@ export let clickNewsHeader;
 export let clickNewsContent;
 export const clickedNews  = (e)=> {
     clickNewsId = e.id;
-    clickNewsImage = '.' + e.image;
+    clickNewsImage = e.image;
     clickNewsHeader = e.header;
     clickNewsContent = e.content;
     

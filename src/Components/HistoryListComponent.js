@@ -9,13 +9,13 @@ function HistoryListComponent(){
 
     const DrawStatus = (e) =>{
         if (e == 'completed'){
-            return "../img/oper_completed.png" 
+            return "./img/oper_completed.png" 
         }
         if (e == 'not_completed'){
-            return '../img/oper_not_completed.png'
+            return './img/oper_not_completed.png'
         }
         if (e == 'blocked'){
-          return '../img/oper_blocked.png' 
+          return './img/oper_blocked.png' 
         }
     }
 

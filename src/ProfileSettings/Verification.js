@@ -10,15 +10,18 @@ import Select from 'react-select'
 import ImageUploader from 'react-image-upload'
 import 'react-image-upload/dist/index.css'
 
-
 function Verification(){
-    const {user, SetUser} = useContext(CustomContext);
+    const {user, SetUser, statusVerification, SetStatusVerification} = useContext(CustomContext)
 
     let [verifDataUser, setVerifDataUser] = useState({})
 
     const [selectedImg1, setSelectedImg1] = useState(null)
     const [selectedImg2, setSelectedImg2] = useState(null)
 
+    const setStatusVerif = ()=>{
+        if (!statusVerification)
+        {SetStatusVerification(true)}
+    }
     const onSubmit = data => {     
                                     axios.post(`http://localhost:3030/verifydatausers`, (Object.assign({}, 
                                     data, 
@@ -29,6 +32,7 @@ function Verification(){
                                     )))
                                     .then(res=> console.log(res.data))
                                     .catch((err) => console.log(err.message))
+                                    setStatusVerif()
                              }; 
 
 

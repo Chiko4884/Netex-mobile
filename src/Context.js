@@ -9,7 +9,8 @@ export const Context = (props) => {
         email : ''
     })
 
-
+    const [statusVerification, SetStatusVerification] = useState(false)
+    
     useEffect( () => {
         if (localStorage.getItem('user') != null) {
             SetUser(JSON.parse(localStorage.getItem('user')))
@@ -17,7 +18,7 @@ export const Context = (props) => {
       
       }, [])
 
-    return <CustomContext.Provider value = {{user, SetUser}}>
+    return <CustomContext.Provider value = {{user, SetUser, statusVerification, SetStatusVerification}}>
             {props.children}
            </CustomContext.Provider>
 

@@ -5,6 +5,10 @@ import HeaderComponent from "./HeaderComponent";
 import './vyvodNaKartu.scss'
 import WalletComponentVyvod from "./WalletComponentVyvod";
 
+import { criptoNum } from "./WalletComponentVyvod";
+import { clickedCriptoName } from "./WalletComponentVyvod";
+import { clickedCriptoSign } from "./WalletComponentVyvod";
+import { clickedCriptoCoin } from "./WalletComponentVyvod";
 
 const seti = [
     { value: '1', label: 'Tether US (BEP 20)' },
@@ -14,8 +18,8 @@ const seti = [
 function VyvodNaKartu(props){
   
 const [cardName, SetCardName] = useState('VISA Казахстан')
-const [walletName, SetWalletName] = useState('USDT')
-const [walletValue, SetWalletValue] = useState(0.06)
+const [walletName, SetWalletName] = useState({clickedCriptoName})
+const [walletValue, SetWalletValue] = useState({clickedCriptoCoin})
 
 const [selectedSeti, setSelectedSeti] = useState(null);
 
@@ -23,14 +27,14 @@ const {register, handleSubmit,formState:{ errors, isValid }, formState}=useForm(
     mode: 'OnChange'
 })
 
-const onSubmit = () => {console.log(walletName, walletValue)};
+const onSubmit = () => {console.log({clickedCriptoName}, {clickedCriptoCoin})};
     return(
         <div className="korobka_na_kartu">
             <HeaderComponent title = {cardName}/>
 <div className="body_vyvod_na_kartu">
             <div className='div_title_card'>
-                <h1>Вывести средства с {walletName} кошелька</h1>
-                <p>Доступная сумма: {walletValue} {walletName}</p>
+                <h1>Вывести средства с {clickedCriptoSign} кошелька</h1>
+                <p>Доступная сумма: {clickedCriptoCoin} {clickedCriptoSign}</p>
             </div>
     <div className='div_card_info'>
 
@@ -38,7 +42,7 @@ const onSubmit = () => {console.log(walletName, walletValue)};
             <img className='icon_card_info' src='./img/min_sum_icon.png'/>
                 <div className='div_txt_info'>
                 <h3>Мин. сумма</h3>
-                <p> 10 {walletName}</p>
+                <p> 10 USDT</p>
                 </div>
             </div>
            
@@ -85,14 +89,14 @@ const onSubmit = () => {console.log(walletName, walletValue)};
         </div>
 
           <p className="p1">Сумма отправления</p>
-          <input className="inp1" defaultValue={walletValue} />
-          <p className="p2">{walletName}</p>
+          <input className="inp1" defaultValue={clickedCriptoCoin} />
+          <p className="p2">{clickedCriptoSign}</p>
 
           <p className="p1">Сумма к получению</p>
-          <input className="inp1" defaultValue={walletValue} />
-          <p className="p2">{walletName}</p>
+          <input className="inp1" defaultValue={clickedCriptoCoin} />
+          <p className="p2">{clickedCriptoSign}</p>
 
-          <p className="p1">Номер {walletName} кошелька</p>
+          <p className="p1">Номер {clickedCriptoSign} кошелька</p>
           <input className="inp1" 
           placeholder="00000000000000000000000000"
           />

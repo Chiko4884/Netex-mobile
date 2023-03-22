@@ -1,16 +1,16 @@
 import React from 'react'
 import './walletComponent.scss'
 import { Link } from 'react-router-dom';
-import {walletsData} from '../Datas/walletsData'
+import wData from '../Datas/walletsData.json'
 
-function WalletComponent(){
+function WalletComponent(props){
 
 
 
     return (
 
         <div className='block_wallets'>
-            {walletsData.map((item) => (
+            {wData.map((item) => (
             <div className='div_wallet' key={item.id}>
             <img className='logo_binance' src={item.icon}/>
                 <div className='div_txt_'>

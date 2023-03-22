@@ -12,6 +12,7 @@ import { useForm } from "react-hook-form";
 
 function ProfileComponent(){
     const {user, SetUser} = useContext(CustomContext);
+
     const {register, handleSubmit,formState:{ errors, isValid }, getValues, watch, formState}=useForm({
         mode: 'onBlur'
     })

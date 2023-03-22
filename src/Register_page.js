@@ -27,6 +27,10 @@ function Register_page(){
                 token: data.accessToken,
                 ...data.user
             })
+            localStorage.setItem('user', JSON.stringify({
+                token: data.accessToken,
+                ...data.user
+            }))
 
         }
         )
