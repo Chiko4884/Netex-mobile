@@ -20,6 +20,13 @@
       "name": "ww",
       "lastname": "www",
       "id": 17
+    },
+    {
+      "email": "qw@qw.qw",
+      "password": "$2a$10$q3Ic1DUU1e3XYzDePICovuJ5jrk0yOkkXDesnDrFKDnzdDREN79gS",
+      "name": "qwqw",
+      "lastname": "wqwqww",
+      "id": 18
     }
   ],
   "verifydatausers": [

@@ -17,7 +17,7 @@ root.render(
 )
   }
 
-else {
+if (winInnerWidth < 431) {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <HashRouter> 

@@ -2,30 +2,31 @@
 import React from 'react'
 import {Routes, Route, useLocation} from 'react-router-dom';
 import Auth_page from "./Auth_page";
-import { ConfirmPinModal } from "./Components/ConfirmPinModal";
-import ConfirmRegis from "./Components/ConfirmRegis";
+import { ConfirmPinModal } from "./Components/AuthComponents/ConfirmPinModal";
+import ConfirmRegis from "./Components/AuthComponents/ConfirmRegis";
 import Zastavka from './Components/Zastavka';
 import { Register_page } from "./Register_page";
 import Main_page from './Main_page';
-import Wallets from './Wallets';
-import News from './News';
-import NewsOne from './NewsOne';
-import Popolnenie from './Popolnenie';
-import CurrencyRates from './Components/CurrencyRates';
+import Wallets from './Components/MainComponents/Wallets';
+import News from './Components/MainComponents/News';
+import NewsOne from './Components/MainComponents/NewsOne';
+import CurrencyRates from './Components/TorgovlyaComponents/CurrencyRates';
 import Vyvod from './Vyvod';
 import Profile from './Profile';
 import History from './History';
 import FooterTab from './Components/FooterTab';
-import VyvodNaKartu from './Components/VyvodNaKartu';
-import AboutService from './info_section/AboutService';
-import Faq from './info_section/Faq';
-import KakNachat from './info_section/KakNachat';
-import Contacts from './info_section/Contacts';
-import Verification from './ProfileSettings/Verification';
-import HistoryAccount from './ProfileSettings/HistoryAccount';
-import Security from './ProfileSettings/Security';
-import TwoFactorAuth from './ProfileSettings/TwoFactorAuth';
-import SecurityEdit from './ProfileSettings/SecurityEdit';
+import VyvodNaKartu from './Components/VyvodComponents/VyvodNaKartu';
+import AboutService from './Components/ProfileComponents/info_section/AboutService';
+import Faq from './Components/ProfileComponents/info_section/Faq';
+import KakNachat from './Components/ProfileComponents/info_section/AboutService';
+import Contacts from './Components/ProfileComponents/info_section/Contacts';
+import Verification from './Components/ProfileComponents/ProfileSettings/Verification';
+import HistoryAccount from './Components/ProfileComponents/ProfileSettings/HistoryAccount';
+import Security from './Components/ProfileComponents/ProfileSettings/Security';
+import TwoFactorAuth from './Components/ProfileComponents/ProfileSettings/TwoFactorAuth';
+import SecurityEdit from './Components/ProfileComponents/ProfileSettings/SecurityEdit';
+import Torgovlya from './Torgovlya';
+
 
 function App(){
   const location = useLocation()
@@ -43,7 +44,7 @@ function App(){
                 <Route path='/news/:id' element= {<NewsOne/>}/>
                 <Route path='/news' element= {<News/>}/>
                 <Route path='/popolnenie/:currency_rates' element = {<CurrencyRates/>}/>
-                <Route path='/popolnenie' element= {<Popolnenie/>}/>
+                <Route path='/popolnenie' element= {<Torgovlya/>}/>
                 <Route path='/vyvod/:id' element={<VyvodNaKartu/>}/>
                 <Route path='/vyvod' element= {<Vyvod/>}/>
                 <Route path='/profile/about' element= {<AboutService/>}/>
@@ -66,7 +67,5 @@ function App(){
         </div>
 
       );
-    
-
 }
 export default App;

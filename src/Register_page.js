@@ -2,9 +2,8 @@ import React, { useState, useContext } from 'react'
 import './register_page.scss'
 import { useForm, useWatch } from 'react-hook-form'; 
 import { useNavigate } from "react-router"
-import { Link } from 'react-router-dom';
 import axios, { Axios } from 'axios';
-import  {Context, CustomContext}  from './Context';
+import  {CustomContext}  from './Context';
 import HeaderComponent from './Components/HeaderComponent';
 
 function Register_page(){

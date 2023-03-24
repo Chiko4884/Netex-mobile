@@ -1,6 +1,7 @@
 import React from 'react'
 import './main_page.scss'
-import Main_component from './Components/Main_component';
+import './Components/footerTab.scss'
+import Main_component from './Components/MainComponents/Main_component';
 import {useNavigate} from 'react-router-dom'
 import { useEffect } from 'react';
 

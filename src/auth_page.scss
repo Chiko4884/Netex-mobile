@@ -20,7 +20,7 @@ $img_h:447px;
     @include breakpoint(w360){
         max-width: 360px;
     }
-    @include breakpoint(w320){
+    @include breakpoint(w320){      
         max-width: 320px;
     }
 }

@@ -1,7 +1,6 @@
 import React from "react";
-import './popolnenie.scss';
 import FooterTab from "./Components/FooterTab";
-import Vyvod_compon from "./Components/Vyvod_compon";
+import Vyvod_compon from "./Components/VyvodComponents/Vyvod_compon";
 
 function Vyvod(){
 

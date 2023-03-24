@@ -16,7 +16,7 @@
         @media (min-width:321px) and (max-width:360px){@content;} 
     }
     @else if $point == w320{//iphone4,5,SE, LG
-        @media (min-width:300px) and (max-width:320px){@content;} 
+        @media (min-width:280px) and (max-width:320px){@content;} 
     }
 
 }

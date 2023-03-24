@@ -1,7 +1,6 @@
 import React from "react";
-import './profile.scss';
 import FooterTab from "./Components/FooterTab";
-import ProfileComponent from "./Components/ProfileComponent";
+import ProfileComponent from "./Components/ProfileComponents/ProfileComponent";
 
 function Profile(){
 

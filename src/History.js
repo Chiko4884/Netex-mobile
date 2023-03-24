@@ -1,8 +1,5 @@
 import React from "react";
-import './history.scss';
-import FooterTab from "./Components/FooterTab";
-import ProfileComponent from "./Components/ProfileComponent";
-import HistoryComponent from "./Components/HistoryComponent";
+import HistoryComponent from "./Components/HistoryComponents/HistoryComponent";
 
 function History(){
 

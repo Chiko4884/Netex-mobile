@@ -1,8 +1,6 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './footerTab.scss'
-import { useNavigate } from "react-router"
-import Main_component from './Main_component';
 
 
 function FooterTab(){
