@@ -31,7 +31,9 @@
     background: #F9F9FF;
     // border: solid 0.1px red;
     z-index: 1100;
-
+    .h3_title{
+        white-space: nowrap;
+    }
 }
 .body_hist_account{
     width: 100%;

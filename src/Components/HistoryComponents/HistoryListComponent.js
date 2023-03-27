@@ -4,6 +4,7 @@ import { historyData } from "../../Datas/historyData";
 import { useState } from "react";
 import {useForm} from 'react-hook-form';
 import { useEffect } from "react";
+import {motion, AnimatePresence} from 'framer-motion'
 
 function HistoryListComponent(){
 
@@ -62,7 +63,25 @@ let clickedPayment  = (e)=> {
 
     setPaymentToggle(!paymentToggle)   
 }
-    
+  
+const [touchPosition, setTouchPosition] = useState(null)
+
+const handleTouchStart = (e) => {
+    const touchDown = e.touches[0].clientY;
+    setTouchPosition(touchDown);
+  }
+
+  const handleTouchMove = (e) => {
+    if (touchPosition === null) {
+      return;
+    }
+    const currentPosition = e.touches[0].clientY;
+    const direction = touchPosition - currentPosition;
+    if (direction < -10) {
+        setPaymentToggle(!paymentToggle)  
+    }
+    setTouchPosition(null);
+  }
 
     return(
         <div className="history_list">
@@ -78,9 +97,18 @@ let clickedPayment  = (e)=> {
 </div>
         </div>
             ))}
-
+<AnimatePresence>
 {paymentToggle && 
-                <div className="payment_toggle">
+                <motion.div  
+                className="payment_toggle"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+            
+                initial={{bottom: '-800px'}}
+                animate={{bottom: '0px'}}
+                exit={{bottom: '-800px'}}
+                transition={{duration: 0.3}} 
+                >
                 <div className='div_line'></div>
                    
                  <h3 className="payment_title">Квитанция об оплате</h3>
@@ -95,15 +123,16 @@ let clickedPayment  = (e)=> {
                 </div>
 <h3>Реквизит</h3>
 <div className="div_rekvisit"> <p>{payRekvisit}</p> 
-        <img src="./img/copy_sign.png"  onClick={() =>  navigator.clipboard.writeText(payRekvisit)}/> </div>
+        <img src="./img/copy_sign.png"  onClick={() =>  {navigator.clipboard.writeText(payRekvisit); console.log('реквизит скопирован')}}/> </div>
 
 <h3>Примечание</h3>
 <div className="div_note"> <p>{payNote}</p> 
-        <img src="./img/copy_sign.png" onClick={() =>  navigator.clipboard.writeText(payNote)}/> </div>
+        <img src="./img/copy_sign.png" onClick={() =>  {navigator.clipboard.writeText(payNote); console.log('примечание скопировано')}}/> </div>
 
 <button className="btn_close_pay" onClick={toggleFunc}>Закрыть</button>
-                </div>
+                </motion.div >
     }
+    </AnimatePresence>
 {paymentToggle &&  <div onClick={toggleFunc} className="back_blur_pay">  </div>}
 
         </div>

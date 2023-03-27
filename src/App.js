@@ -18,7 +18,7 @@ import FooterTab from './Components/FooterTab';
 import VyvodNaKartu from './Components/VyvodComponents/VyvodNaKartu';
 import AboutService from './Components/ProfileComponents/info_section/AboutService';
 import Faq from './Components/ProfileComponents/info_section/Faq';
-import KakNachat from './Components/ProfileComponents/info_section/AboutService';
+import KakNachat from './Components/ProfileComponents/info_section/KakNachat';
 import Contacts from './Components/ProfileComponents/info_section/Contacts';
 import Verification from './Components/ProfileComponents/ProfileSettings/Verification';
 import HistoryAccount from './Components/ProfileComponents/ProfileSettings/HistoryAccount';

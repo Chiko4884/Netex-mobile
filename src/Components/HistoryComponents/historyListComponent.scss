@@ -1,7 +1,7 @@
 @import '../../vars';
 
 *{
-
+    height: auto;
     max-width: 428px;
     box-sizing: border-box;
     @include breakpoint(w414){
@@ -50,7 +50,7 @@
             // border: solid 0.1px red;
             .icon_title{
                 width: 200px;
-                height: 15.5em;
+                height: 15.5px;
                 display: flex;
                 flex-direction: row;
                 justify-content: start;
@@ -72,7 +72,7 @@
             }
             .op-type_status{
                 width: 100%;
-                height: 15.5em;
+                height: 15.5px;
                 display: flex;
                 flex-direction: row;
                 justify-content: end;
@@ -101,7 +101,7 @@
             justify-content: space-between;
             .prihod{
                 width: 100%;
-                height: 15.5em;
+                height: 15.5px;
                 display: flex;
                 flex-direction: row;
                 justify-content: start;
@@ -131,7 +131,7 @@
             }
             .rashod{
                 width: 100%;
-                height: 15.5em;
+                height: 15.5px;
                 display: flex;
                 flex-direction: row;
                 justify-content: end;
@@ -203,15 +203,8 @@
     border-radius: 24px;
     // border: solid 1px red;
     z-index: 10000002;
-    @include breakpoint(w375){
-        position: absolute;
-    }
-    @include breakpoint(w360){
-        position: absolute;
-    }
-    @include breakpoint(w320){
-        position: absolute;
-    }
+
+
     h3{
         width: 100%;
         height: 16px;
@@ -235,6 +228,9 @@
         background: #FFFFFF;
         border-radius: 8px;
         margin-bottom: 24px;
+        @include breakpoint(w320){
+            margin-bottom: 8px;
+        }
         p{
             height: 18px;
             font-family: 'Roboto',sans-serif;
@@ -262,6 +258,9 @@
         background: #FFFFFF;
         border-radius: 8px;
         margin-bottom: 24px;
+        @include breakpoint(w320){
+            margin-bottom: 8px;
+        }
         p{
             height: 18px;
             font-family: 'Roboto',sans-serif;
@@ -284,6 +283,9 @@
     border-radius: 100px;
     margin-top: 16px;
     margin-bottom: 24px;
+    @include breakpoint(w320){
+        margin-bottom: 8px;
+    }
 
 }
 .payment_title{
@@ -297,12 +299,18 @@
     text-align: center;
     color: #0D121F;
     margin-bottom: 24px;
+    @include breakpoint(w320){
+        margin-bottom: 8px;
+    }
 }
 .payment_datas{
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
+    @include breakpoint(w320){
+        margin-bottom: 8px;
+    }
     .pay_list{
         width: 100%;
         display: flex;
@@ -370,6 +378,9 @@
     line-height: 16px;
     text-transform: uppercase;
     color: #0D121F;
+    @include breakpoint(w320){
+        height: 36px;
+    }
 }
 
 }

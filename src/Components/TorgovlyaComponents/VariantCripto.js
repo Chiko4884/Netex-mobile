@@ -2,8 +2,7 @@ import React from "react";
 import './variantCripto.scss';
 import { criptoVar } from "../../Datas/criptoVar";
 import { useState } from "react";
-
-
+import {motion, AnimatePresence} from 'framer-motion'
 
 
 function VariantCripto(){
@@ -25,9 +24,28 @@ let clickedCripto  = (e)=> {
         setCriptoPopolnenie(!criptoPopolnenie)   
 }
 
+    const [touchPosition, setTouchPosition] = useState(null)
+
+    const handleTouchStart = (e) => {
+        const touchDown = e.touches[0].clientY;
+        setTouchPosition(touchDown);
+      }
+    
+      const handleTouchMove = (e) => {
+        if (touchPosition === null) {
+          return;
+        }
+        const currentPosition = e.touches[0].clientY;
+        const direction = touchPosition - currentPosition;
+        if (direction < -10) {
+            setCriptoPopolnenie(!criptoPopolnenie)   ;
+        }
+        setTouchPosition(null);
+      }
+
     return(
 
-        <div className="div_variantt">
+        <div className="div_variantt" >
 {criptoVar.map((item) => (
     <div key={item.id} className='div_crip1' onClick= {() => {clickedCripto(item)}} >
             <img className="img1" src={item.image} alt='var'/>
@@ -39,12 +57,20 @@ let clickedCripto  = (e)=> {
     </div>
     ))}
 
-    {criptoPopolnenie && 
-                <div className="container_popolnenie">
-                <div className='div_line'></div>
-                   
+    <AnimatePresence>
+    {criptoPopolnenie &&  
+    <motion.div 
+    className="container_popolnenie"
+    onTouchStart={handleTouchStart}
+    onTouchMove={handleTouchMove}
+
+    initial={{bottom: '-800px'}}
+    animate={{bottom: '0px'}}
+    exit={{bottom: '-800px'}}
+    transition={{duration: 0.3}}    
+    >
+                <div className='div_line' ></div>
                         <h3 className="crip_title"> {clickCriptoText} депозитный адрес</h3>
-                    
                     <div className="block_predup">
                         <img src="./img/znak_predup.png"/>
                         <p>Если отправить криптовалюту на неверный адрес (например, биткойн на адрес Bitcoin Cash), криптовалюта будет потеряна</p>
@@ -69,8 +95,10 @@ let clickedCripto  = (e)=> {
                     > 
                     <img src="./img/copy_sign.png"/> Скопировать адрес</button>
             </div>
-                </div>
-    }
+                </motion.div>
+
+}
+    </AnimatePresence>
        {criptoPopolnenie &&  <div onClick={toggleCriptoPop} className="back_blur">  </div>}
 </div>
 

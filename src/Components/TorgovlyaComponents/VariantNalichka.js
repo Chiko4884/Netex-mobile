@@ -2,6 +2,7 @@ import React from "react";
 import './variantNalichka.scss';
 import { nalichkaVar } from "../../Datas/nalichkaVar";
 import { useState } from "react";
+import {motion, AnimatePresence} from 'framer-motion'
 
 function VariantNalichka(){
     const [nalichkaPopolnenie, setNalichkaPopolnenie] = useState(false)
@@ -9,6 +10,24 @@ const toggleNalichkaPop= () => {
     setNalichkaPopolnenie(!nalichkaPopolnenie)
 }
 
+const [touchPosition, setTouchPosition] = useState(null)
+
+const handleTouchStart = (e) => {
+    const touchDown = e.touches[0].clientY;
+    setTouchPosition(touchDown);
+  }
+
+  const handleTouchMove = (e) => {
+    if (touchPosition === null) {
+      return;
+    }
+    const currentPosition = e.touches[0].clientY;
+    const direction = touchPosition - currentPosition;
+    if (direction < -10) {
+        setNalichkaPopolnenie(!nalichkaPopolnenie)
+    }
+    setTouchPosition(null);
+  }
 
     return(
         <div className="div_variantt">
@@ -23,8 +42,18 @@ const toggleNalichkaPop= () => {
             ))}
 
 {nalichkaPopolnenie &&  <div onClick={toggleNalichkaPop} className="back_blur">  </div>}
+<AnimatePresence>
 {nalichkaPopolnenie && 
-                <div className="container_nal_popolnenie">
+                <motion.div  
+                className="container_nal_popolnenie"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+            
+                initial={{bottom: '-300px'}}
+                animate={{bottom: '0px'}}
+                exit={{bottom: '-300px'}}
+                transition={{duration: 0.3}}   
+                >
                 <div className='div_line'></div>
                     <h3 className="nal_title"> Для оплаты <br/>"Оплата наличными"</h3>
                     <p>Вам необходимо связаться с нами по WhatsApp</p>
@@ -35,9 +64,10 @@ const toggleNalichkaPop= () => {
                     type="button"
                     > 
                      Понятно</button>
-                    </div>
+                    </motion.div >
 
 }
+</AnimatePresence>
 </div>
     )
 }

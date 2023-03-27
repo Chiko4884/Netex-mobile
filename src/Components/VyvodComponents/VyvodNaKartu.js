@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import Select from 'react-select';
 import HeaderComponent from "../HeaderComponent";
 import './vyvodNaKartu.scss'
@@ -13,7 +14,7 @@ const seti = [
   ];
 
 function VyvodNaKartu(props){
-  
+  const navigation = useNavigate()
 const [cardName, SetCardName] = useState('VISA Казахстан')
 const [walletName, SetWalletName] = useState({clickedCriptoName})
 const [walletValue, SetWalletValue] = useState({clickedCriptoCoin})
@@ -24,7 +25,7 @@ const {register, handleSubmit,formState:{ errors, isValid }, formState}=useForm(
     mode: 'OnChange'
 })
 
-const onSubmit = () => {console.log({clickedCriptoName}, {clickedCriptoCoin})};
+const onSubmit = () => {console.log({clickedCriptoName}, {clickedCriptoCoin}); navigation(-1)};
     return(
         <div className="korobka_na_kartu">
             <HeaderComponent title = {cardName}/>

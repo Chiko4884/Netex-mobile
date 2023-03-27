@@ -3,6 +3,7 @@ import './variantFiat.scss';
 import { fiatVar } from "../../Datas/fiatVar";
 import { useState } from "react";
 import {useForm} from 'react-hook-form'
+import {motion, AnimatePresence} from 'framer-motion'
 
 function VariantFiat(){
 const[sumZachisleniya, SetSumZachisleniya] = useState()
@@ -68,6 +69,24 @@ const onSubmit_podtver = () => {
     console.log({primechanie})
 };
 
+const [touchPosition, setTouchPosition] = useState(null)
+
+const handleTouchStart = (e) => {
+    const touchDown = e.touches[0].clientY;
+    setTouchPosition(touchDown);
+  }
+
+  const handleTouchMove = (e) => {
+    if (touchPosition === null) {
+      return;
+    }
+    const currentPosition = e.touches[0].clientY;
+    const direction = touchPosition - currentPosition;
+    if (direction < -10) {
+        setFiatPopolnenie(!fiatPopolnenie)
+    }
+    setTouchPosition(null);
+  }
     return(
 
         <div className="div_variantt">
@@ -80,9 +99,18 @@ const onSubmit_podtver = () => {
                 </div>
         </div>
             ))}
-
+<AnimatePresence>
 {fiatPopolnenie && 
-                <div className="container_fiat_popolnenie">
+                <motion.div  
+                className="container_fiat_popolnenie"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+            
+                initial={{bottom: '-500px'}}
+                animate={{bottom: '0px'}}
+                exit={{bottom: '-500px'}}
+                transition={{duration: 0.3}}   
+                >
                 <div className='div_line'></div>
                    
                         <h3 className="fiat_title"> Пополнить через "Оплата картой"</h3>
@@ -126,8 +154,9 @@ const onSubmit_podtver = () => {
                     >   
                      Пополнить баланс</button>
             </form>
-                </div>
+                </motion.div >
     }
+    </AnimatePresence>
        {fiatPopolnenie &&  <div onClick={toggleFiatPop} className="back_blur">  </div>}
        {fiatPodtver &&  <div onClick={toggleFiatPodtver} className="back_blur">  </div>}
 

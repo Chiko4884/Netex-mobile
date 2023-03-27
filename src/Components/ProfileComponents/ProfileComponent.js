@@ -8,7 +8,7 @@ import HeaderComponent from "../HeaderComponent";
 import {FaAngleRight, FaCheckCircle, FaCircle} from 'react-icons/fa'
 import { useForm } from "react-hook-form";
 import UserComponent_verif from "./UserComponent_verif";
-
+import {motion, AnimatePresence} from 'framer-motion'
 
 function ProfileComponent(){
     const {user, SetUser} = useContext(CustomContext);
@@ -57,6 +57,49 @@ function ProfileComponent(){
     const toggleLogout= () => {
         setLogoutWinState(!logoutWinState)
     }
+
+    const [touchPosition, setTouchPosition] = useState(null)
+
+    const handleTouchStart = (e) => {
+        const touchDown = e.touches[0].clientY;
+        setTouchPosition(touchDown);
+      }
+    
+      const handleTouchMove = (e) => {
+        if (touchPosition === null) {
+          return;
+        }
+        const currentPosition = e.touches[0].clientY;
+        const direction = touchPosition - currentPosition;
+        if (direction < -10) {
+            setProfileSettings(!profileSettings)
+        }
+        setTouchPosition(null);
+      }
+      const handleTouchMoveChange = (e) => {
+        if (touchPosition === null) {
+          return;
+        }
+        const currentPosition = e.touches[0].clientY;
+        const direction = touchPosition - currentPosition;
+        if (direction < -10) {
+            setChangePassword(!changePassword)
+        }
+        setTouchPosition(null);
+      }
+
+      const handleTouchMoveLang = (e) => {
+        if (touchPosition === null) {
+          return;
+        }
+        const currentPosition = e.touches[0].clientY;
+        const direction = touchPosition - currentPosition;
+        if (direction < -10) {
+            setLangWinState(!langWinState)
+        }
+        setTouchPosition(null);
+      }
+
     return(
         
         <div className="korobka_profile">
@@ -138,8 +181,18 @@ function ProfileComponent(){
         </div>
 
 {/* profile settings */}
+<AnimatePresence>
 {profileSettings && 
- <div className="body_settings_profile"> 
+ <motion.div 
+ className="body_settings_profile"
+ onTouchStart={handleTouchStart}
+ onTouchMove={handleTouchMove}
+
+ initial={{bottom: '-800px'}}
+ animate={{bottom: '0px'}}
+ exit={{bottom: '-800px'}}
+ transition={{duration: 0.3}}    
+ > 
              <div className='div_line'></div>
              <h3 className="settings_title">Настройки профиля</h3>
     <div className="div_inp_settings">
@@ -184,13 +237,24 @@ function ProfileComponent(){
     <button type="button" className="btn_save_settings" onClick={toggleSettingsProfile}>
         Сохранить</button>
 
-   </div>
+   </motion.div>
             }
+            </AnimatePresence>
 {profileSettings &&  <div onClick={toggleSettingsProfile} className="back_blur">  </div>}
 
 {/* change password */}
+<AnimatePresence>
 {changePassword && 
-     <div className="body_change_password"> 
+     <motion.div 
+     className="body_change_password"
+     onTouchStart={handleTouchStart}
+     onTouchMove={handleTouchMoveChange}
+ 
+     initial={{bottom: '-800px'}}
+     animate={{bottom: '0px'}}
+     exit={{bottom: '-800px'}}
+     transition={{duration: 0.3}}   
+     > 
      <div className='div_line'></div>
      <h3 className="settings_title">Сменить пароль</h3>
 
@@ -262,13 +326,24 @@ function ProfileComponent(){
 <button type="button" id="btn_change" className="btn_save_settings" onClick={toggleChangePassword}>
 Сохранить</button>
 
-</div>
+</motion.div>
 }
+</AnimatePresence>
 {changePassword &&  <div onClick={toggleChangePassword} className="back_blur">  </div>}
 
 {/* language */}
+<AnimatePresence>
 {langWinState && 
-     <div className="body_language"> 
+     <motion.div 
+     className="body_language"
+     onTouchStart={handleTouchStart}
+     onTouchMove={handleTouchMoveLang}
+ 
+     initial={{bottom: '-800px'}}
+     animate={{bottom: '0px'}}
+     exit={{bottom: '-800px'}}
+     transition={{duration: 0.3}}  
+     > 
          <div className='div_line'></div>
          <h3 className="lang_title">Язык приложения</h3>
         <div className="div_lang">
@@ -287,8 +362,9 @@ function ProfileComponent(){
 <label className="lbl_lang" htmlFor="lang3"><FaCheckCircle className="check_circle"/></label>
         </div>
 
-     </div>
+     </motion.div>
 }
+</AnimatePresence>
 {langWinState &&  <div className="div_blur_logout" onClick={toggleLang}> </div> }
 
 {/* logout */}

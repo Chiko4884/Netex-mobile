@@ -23,34 +23,17 @@
 }
 .korobka_vyvod{
     width: 100%;
-    height: 100vh;
-    // height: auto;
-    overflow: hidden;
     position: relative;
     background: #F9F9FF;
-    // padding: 16px;
-    // border: solid 0.1px red;
-    @include breakpoint(w393){
-        height: 120vh;
-    }
-    @include breakpoint(w375){
-        height: 150vh;
-    }
-    @include breakpoint(w360){
-        height: 130vh;
-    }
-    @include breakpoint(w320){
-        height: 170vh;
-    }
+
     .logout{
         display: none;
     }
     .vyvod_body{
         width: 100%;
-        // padding-left: 16px;
-        // padding-right: 16px;
         position: relative;
         top: 100px;
+        padding-bottom: 60px;
     }
 
 }
