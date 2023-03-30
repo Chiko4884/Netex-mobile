@@ -78,7 +78,7 @@ function Verification(){
 
     return(
         <div className="korobka_verif">
-            <HeaderComponent title = 'Верификация аккаунта'/>
+            <HeaderComponent title =  '__Верификация аккаунта'/>
             <div className="verif_body">
             <div className="block_info">
                         <img src="./img/znak_predup.png"/>
