@@ -5,6 +5,7 @@ import { useState } from "react";
 import {useForm} from 'react-hook-form';
 import { useEffect } from "react";
 import {motion, AnimatePresence} from 'framer-motion'
+import { listHistDataExp } from "./HistoryComponent";
 
 function HistoryListComponent(){
 
@@ -19,6 +20,7 @@ function HistoryListComponent(){
           return './img/oper_blocked.png' 
         }
     }
+
 
     const [paymentToggle, setPaymentToggle] = useState(false)
     const toggleFunc= () => {
@@ -85,7 +87,7 @@ const handleTouchStart = (e) => {
 
     return(
         <div className="history_list">
-                        {historyData.map((item) => (
+        {listHistDataExp.map((item) => (
             <div key={item.id} className='history_item' onClick= {() => {clickedPayment(item)}}> 
 <div className="icon_title_type_status">
     <div className="icon_title">  <img className='logo_hist' src={item.icon} alt='visa'/> <h3>{item.title}</h3> </div>

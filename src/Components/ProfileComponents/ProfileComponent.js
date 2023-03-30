@@ -9,13 +9,15 @@ import {FaAngleRight, FaCheckCircle, FaCircle} from 'react-icons/fa'
 import { useForm } from "react-hook-form";
 import UserComponent_verif from "./UserComponent_verif";
 import {motion, AnimatePresence} from 'framer-motion'
+import axios from "axios";
 
 function ProfileComponent(){
     const {user, SetUser} = useContext(CustomContext);
-
+    const navigate = useNavigate()
     const {register, handleSubmit,formState:{ errors, isValid }, getValues, watch, formState}=useForm({
         mode: 'onBlur'
     })
+//toggle functions
     const [profileSettings, setProfileSettings] = useState(false)
     const toggleSettingsProfile = () => {
         setProfileSettings(!profileSettings)
@@ -24,7 +26,11 @@ function ProfileComponent(){
     const toggleChangePassword = () => {
         setChangePassword(!changePassword)
         }
-
+    const [langWinState, setLangWinState] = useState(false)
+    const toggleLang= () => {
+        setLangWinState(!langWinState)
+        }
+//eyes
         const [toggleIconState0, SetToggleIconState0] = useState(false)
     const togglePass0  = () => {
             SetToggleIconState0(!toggleIconState0)
@@ -40,12 +46,7 @@ function ProfileComponent(){
         SetToggleIconState2(!toggleIconState2)
     }
 
-    const [langWinState, setLangWinState] = useState(false)
-    const toggleLang= () => {
-        setLangWinState(!langWinState)
-    }
-
-    const navigate = useNavigate()
+ // logout func
     const logOut = () => {
         SetUser({
             email: ''
@@ -57,14 +58,13 @@ function ProfileComponent(){
     const toggleLogout= () => {
         setLogoutWinState(!logoutWinState)
     }
-
+//animation 
     const [touchPosition, setTouchPosition] = useState(null)
-
     const handleTouchStart = (e) => {
         const touchDown = e.touches[0].clientY;
         setTouchPosition(touchDown);
       }
-    
+//animation profile settings modal
       const handleTouchMove = (e) => {
         if (touchPosition === null) {
           return;
@@ -76,6 +76,7 @@ function ProfileComponent(){
         }
         setTouchPosition(null);
       }
+//animation change password modal
       const handleTouchMoveChange = (e) => {
         if (touchPosition === null) {
           return;
@@ -87,7 +88,7 @@ function ProfileComponent(){
         }
         setTouchPosition(null);
       }
-
+//animation change language modal
       const handleTouchMoveLang = (e) => {
         if (touchPosition === null) {
           return;
@@ -98,6 +99,30 @@ function ProfileComponent(){
             setLangWinState(!langWinState)
         }
         setTouchPosition(null);
+      }
+//save profile settings
+      const saveProfileSettings = (e)=>{
+            // e.preventDefault()
+            let uptUser ={
+                name: e.name,
+                lastname: e.lastname,
+                phone: e.phone,
+                email: e.email,
+            }
+             axios.put("http://localhost:3030/register", uptUser)
+            .then(({data}) => 
+            {
+                SetUser( {
+                    token: data.accessToken,
+                    ...data.user
+                })
+                localStorage.setItem('user', JSON.stringify({
+                    token: data.accessToken,
+                    ...data.user
+                }))
+            }
+            )
+            .catch((err) => console.log(err.message))
       }
 
     return(

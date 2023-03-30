@@ -7,6 +7,8 @@ import WalletComponentVyvod from "./WalletComponentVyvod";
 import HeaderComponent from "../HeaderComponent";
 
 
+
+
 function Vyvod_compon(){
 
     return(
@@ -14,18 +16,7 @@ function Vyvod_compon(){
 <HeaderComponent title = 'Вывод'/>
 <div className="vyvod_body">
         <UserComponent/>
-    
-        <div className="div_inp_monety">
-            <h1>Вывод на карту</h1>
-            <p>Выберите тип монет</p>
-            <input className="poisk_inp"/>
-            <img src="./img/search_sign.svg"/>
-        </div>
 
-
-        <div className="div_h1">
-            <h1>Доступные варианты</h1>
-        </div>
         <WalletComponentVyvod/>
 
         </div>
