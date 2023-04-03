@@ -2,16 +2,34 @@ import React from "react";
 import { useContext } from "react";
 import { Link } from 'react-router-dom';
 import { CustomContext } from "../../Context";
-// import './userComponentCurr.scss';
+import '../TorgovlyaComponents/userComponentCurr.scss';
+import { useRef } from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function UserComponent(){
     const {user, SetUser} = useContext(CustomContext)
+
+    const myRef = useRef(null);
+    const [isClassName, setIsClassName] = useState('')
+    useEffect(()=>{
+        const width = myRef.current.clientWidth;
+        const widthScr = myRef.current.scrollWidth;
+        const isOverflowing = width <= widthScr;
+
+        if (isOverflowing) {
+            setIsClassName("animate-text");
+        } else {
+            setIsClassName("not");
+        }
+    },[]);
+
     return(
         <div className='user_block'>
         <div className='div_name_balance'>
             <div className='div_name'>
-                <h3>{user.name} {user.lastname}</h3>
-                <p>{user.email}</p>
+                <h3 className={isClassName} id="animated_text" ref={myRef}>{user.name} {user.lastname}</h3>
+                <p className={isClassName} id="animated_text" ref={myRef}>{user.email}</p>
             </div>
             <div className='separator'></div>
             <div className='div_balance'>

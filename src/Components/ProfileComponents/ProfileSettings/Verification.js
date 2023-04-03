@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import HeaderComponent from "../../HeaderComponent";
 import './verification.scss'
 import { useNavigate } from "react-router"
-import axios, { Axios } from 'axios';
+import axios from 'axios';
 import { CustomContext } from "../../../Context";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
@@ -12,7 +12,7 @@ import 'react-image-upload/dist/index.css'
 
 function Verification(){
     const {user, SetUser, statusVerification, SetStatusVerification} = useContext(CustomContext)
-
+    const navigate = useNavigate()
     let [verifDataUser, setVerifDataUser] = useState({})
 
     const [selectedImg1, setSelectedImg1] = useState(null)
@@ -33,6 +33,7 @@ function Verification(){
                                     .then(res=> console.log(res.data))
                                     .catch((err) => console.log(err.message))
                                     setStatusVerif()
+                                    navigate(-1)
                              }; 
 
 

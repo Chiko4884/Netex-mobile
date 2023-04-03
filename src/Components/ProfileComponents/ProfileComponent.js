@@ -58,7 +58,7 @@ function ProfileComponent(){
     const toggleLogout= () => {
         setLogoutWinState(!logoutWinState)
     }
-//animation 
+//animations
     const [touchPosition, setTouchPosition] = useState(null)
     const handleTouchStart = (e) => {
         const touchDown = e.touches[0].clientY;
@@ -103,13 +103,13 @@ function ProfileComponent(){
 //save profile settings
       const saveProfileSettings = (e)=>{
             // e.preventDefault()
-            let uptUser ={
+            let updUser ={
                 name: e.name,
                 lastname: e.lastname,
                 phone: e.phone,
                 email: e.email,
             }
-             axios.put("http://localhost:3030/register", uptUser)
+             axios.put("http://localhost:3030/register", updUser)
             .then(({data}) => 
             {
                 SetUser( {

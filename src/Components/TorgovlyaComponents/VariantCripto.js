@@ -47,7 +47,7 @@ let clickedCripto  = (e)=> {
 
         <div className="div_variantt" >
 {criptoVar.map((item) => (
-    <div key={item.id} className='div_crip1' onClick= {() => {clickedCripto(item)}} >
+    <div key={item.id} className='div_crip1' onClick= {() => {clickedCripto(item)}}>
             <img className="img1" src={item.image} alt='var'/>
             <div className='div_txt_crip'>
                 <h3>{item.title}</h3>

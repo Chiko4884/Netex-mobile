@@ -9,7 +9,7 @@ function Zastavka(){
     useEffect(() => {
       const timeId = setTimeout(() => {
         setShow(false)
-      }, 1000)
+      }, 2000)
   
       return () => {
         clearTimeout(timeId)

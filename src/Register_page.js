@@ -35,7 +35,7 @@ function Register_page(){
         )
         .catch((err) => console.log(err.message))
     }
-    // console.log(user)
+
     const {register, handleSubmit,formState:{ errors, isValid }, getValues, watch, formState}=useForm({
         mode: 'onBlur'
     })
@@ -59,7 +59,6 @@ function Register_page(){
     <div className="register_container">
 <HeaderComponent title = 'Регистрация'/>
         <img className='B_foto' src= './img/B-img.png'/>
-        {/* <Regis className='import_register'/> */}
 <form onSubmit={handleSubmit(onSubmit)} className='regis_form'>
     <div className="h1_">
     <h1>Регистрация</h1>

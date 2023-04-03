@@ -26,6 +26,7 @@ import Security from './Components/ProfileComponents/ProfileSettings/Security';
 import TwoFactorAuth from './Components/ProfileComponents/ProfileSettings/TwoFactorAuth';
 import SecurityEdit from './Components/ProfileComponents/ProfileSettings/SecurityEdit';
 import Torgovlya from './Torgovlya';
+import { AnimatePresence } from 'framer-motion';
 
 
 function App(){
@@ -33,6 +34,7 @@ function App(){
       return (
         <div>
           <Zastavka/>
+          <AnimatePresence>
             <Routes>
                 <Route path='/' element={<Main_page/>}/>
                 <Route path='/auth_page' element= {<Auth_page/>}/>
@@ -59,6 +61,7 @@ function App(){
                 <Route path='/profile' element= {<Profile/>}/>
                 <Route path='/history' element= {<History/>} />
             </Routes>
+            </AnimatePresence>
          {location.pathname == '/' || 
           location.pathname == '/vyvod' ||
           location.pathname == '/popolnenie' ||

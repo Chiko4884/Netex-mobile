@@ -25,7 +25,7 @@
     width: 100%;
     height: auto;
     position: absolute;
-    background: #F9F9FF;
+    // background: #F9F9FF;
     // // overflow: hidden;
     // border: solid 0.1px red;
 .logout{
@@ -37,9 +37,11 @@
     width: 100%;
     min-height: 100%;
     position: absolute;
-    top: 100px;
+    top: 84px;
     overflow: hidden;
     padding-bottom: 90px;
+    background: #F9F9FF;
+    padding-top: 16px;
     // border: solid 0.1px rgb(24, 19, 182);
 }
 

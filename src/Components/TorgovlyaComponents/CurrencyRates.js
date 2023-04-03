@@ -40,7 +40,7 @@ useEffect(()=>{
             onChange={(e) =>setInutUpdate(e.target.value)}
             value = {inputUpdate}
             />
-            <img className="search_img" src="../img/search_sign.png"/>
+            <img className="search_img" src="./img/search_sign.png"/>
         </div>
 
         <div className="div_dostupn_var_currency">

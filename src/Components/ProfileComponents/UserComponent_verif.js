@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useContext } from "react";
 import { Link } from 'react-router-dom';
 import { CustomContext } from "../../Context";
@@ -6,9 +6,25 @@ import '../../Components/TorgovlyaComponents/userComponentCurr.scss';
 import './userComponent_verif.scss';
 import { useEffect } from "react";
 import axios from "axios";
+import ImageUploader from 'react-image-upload'
+import 'react-image-upload/dist/index.css'
 
 function UserComponent_verif(){
     const {user, SetUser, statusVerification, SetStatusVerification} = useContext(CustomContext)
+
+    const myRef = useRef(null);
+    const [isClassName, setIsClassName] = useState('')
+    useEffect(()=>{
+        const width = myRef.current.clientWidth;
+        const widthScr = myRef.current.scrollWidth;
+        const isOverflowing = width <= widthScr;
+
+        if (isOverflowing) {
+            setIsClassName("animate-text");
+        } else {
+            setIsClassName("not");
+        }
+    },[]);
 
     useEffect(()=>{
         const idCkeck = axios.get(`http://localhost:3030/verifydatausers/?userId=${user.id}`)
@@ -18,13 +34,29 @@ function UserComponent_verif(){
     }, [])
 console.log(`http://localhost:3030/verifydatausers/?userId=${user.id}`)
 
+const [selectedAvatar, setSelectedAvatar] = useState(null)
+function getImageFileObject(imageFile) {
+    console.log( selectedAvatar )
+  }
     return(
         <div className='user_block'>
         <div className='div_name_balance'>
-        <img className="avatar" src="./img/artem.png" alt="foto"/>
+        <ImageUploader className= 'avatar'
+      onFileAdded={(img) => getImageFileObject(setSelectedAvatar(img))}
+      style={{
+        borderRadius:17,
+        minHeight:34,
+        minWidth:34,
+        background: '##F3F3F3',
+        position:"relative",
+        marginRight:8
+     }}
+      deleteIcon='-'
+      uploadIcon=''
+    />
             <div className='div_name'>
-            <h3>{user.name} {user.lastname}</h3>
-                <p>{user.email}</p>
+            <h3 className={isClassName} id="animated_text" ref={myRef}>{user.name} {user.lastname}</h3>
+                <p className={isClassName} id="animated_text" ref={myRef}>{user.email}</p>
             </div>
             <div className='separator'></div>
             <div className='div_balance1'>

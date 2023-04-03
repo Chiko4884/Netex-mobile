@@ -27,6 +27,13 @@
       "name": "qwqw",
       "lastname": "wqwqww",
       "id": 18
+    },
+    {
+      "email": "sagynychbekovich_chyngyzbek@mail.ru",
+      "password": "$2a$10$pveaWW48UuCY/C2xtXT.yehXASwxpC5qd.oBrZzftTvS/POdXF8US",
+      "name": "Chyngyzbek",
+      "lastname": "Akimzhanov",
+      "id": 19
     }
   ],
   "verifydatausers": [
@@ -85,6 +92,20 @@
       "image1": "blob:http://localhost:3000/f39f80c1-300c-44e6-a729-28e594ffc4d1",
       "image2": "blob:http://localhost:3000/d3934221-e6b7-405b-baf6-19cd8289a0e4",
       "id": 18
+    },
+    {
+      "name": "qq1",
+      "lastname": "qqq1",
+      "birthday": "2023-04-13",
+      "noPassport": "1111",
+      "noInn": "22222",
+      "city": "qww",
+      "address": "wwq",
+      "userId": 15,
+      "country": "Кыргызстан",
+      "image1": "blob:http://localhost:3000/d40e53a2-9454-4156-9745-caa76935c41f",
+      "image2": "blob:http://localhost:3000/b0fa5c45-9977-41e7-9f36-110310bf5fbc",
+      "id": 19
     }
   ]
 }

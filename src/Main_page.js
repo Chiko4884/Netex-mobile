@@ -4,7 +4,7 @@ import './Components/footerTab.scss'
 import Main_component from './Components/MainComponents/Main_component';
 import {useNavigate} from 'react-router-dom'
 import { useEffect } from 'react';
-
+import { motion } from 'framer-motion';
 
 
 function Main_page(){
@@ -19,11 +19,16 @@ function Main_page(){
 
 return   (
     
-    <div className="main_container">
+    <motion.div className="main_container"
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    transition={{duration: 0.3}} 
+    >
 
         <Main_component/>
     
-    </div>
+    </motion.div>
 
   
     )

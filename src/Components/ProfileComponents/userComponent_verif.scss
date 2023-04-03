@@ -53,7 +53,7 @@
         width: 38.9px;
         height: 34px;
         float: right;
-        margin-left: 8px;
+        margin-right: 8px;
         // border: solid 0.1px red;
         @include breakpoint(w375){
             display: none;
@@ -66,11 +66,7 @@
           } 
     }
 }
-.avatar{
-    width: 34px;
-    height: 34px;
-    margin-right: 8px;
-}
+
 .limit_title{
     width: 167px;
         height: 16px;
