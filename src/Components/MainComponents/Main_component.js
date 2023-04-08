@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './main_component.scss'
 import {crypto} from '../../Datas/Crypto_data'
 import Slider from 'react-slick'
@@ -8,6 +8,9 @@ import "slick-carousel/slick/slick-theme.css";
 import {dataImageNews} from '../../Datas/dataImageNews'
 import {funcData} from '../../Datas/funcData'
 import UserComponent from './UserComponent';
+import { useState } from 'react';
+
+
 
 function Main_component(){
 
@@ -31,6 +34,14 @@ function Main_component(){
           }
         ]
       };
+
+    const navigate = useNavigate()
+
+    const clickedOption  = (e)=> {
+        if (e.title == 'Оплата услуг'){navigate('/oplata_uslug')}
+
+       console.log(e.title )  
+    }
 
 return  (
 
@@ -69,7 +80,7 @@ return  (
             </div>
             <div className='div_func'>
             {funcData.map((item) => (
-            <div key={item.id} className='div_func1'>
+            <div key={item.id} className='div_func1' onClick={()=> {clickedOption(item)}}>
                     <img src={item.image} alt={item.name_coin}/>
                     <div className='div_txt_func'>
                         <h3>{item.title}</h3>

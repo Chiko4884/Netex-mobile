@@ -27,6 +27,9 @@ import TwoFactorAuth from './Components/ProfileComponents/ProfileSettings/TwoFac
 import SecurityEdit from './Components/ProfileComponents/ProfileSettings/SecurityEdit';
 import Torgovlya from './Torgovlya';
 import { AnimatePresence } from 'framer-motion';
+import OplataUslug from './Components/MainComponents/OplataUslug/OplataUslug';
+import Usluga from './Components/MainComponents/OplataUslug/Usluga';
+import FormaOplaty from './Components/MainComponents/OplataUslug/FormaOplaty';
 
 
 function App(){
@@ -60,6 +63,9 @@ function App(){
                 <Route path='/profile/security' element= {<Security/>}/>
                 <Route path='/profile' element= {<Profile/>}/>
                 <Route path='/history' element= {<History/>} />
+                <Route path='/oplata_uslug' element= {<OplataUslug/>}/>
+                <Route path='/oplata_uslug/:usluga' element={<Usluga/>}/>
+                <Route path='/oplata_uslug/:usluga/:forma_oplaty' element= {<FormaOplaty/>}/>
             </Routes>
             </AnimatePresence>
          {location.pathname == '/' || 

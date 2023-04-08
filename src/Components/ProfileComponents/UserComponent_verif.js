@@ -17,7 +17,7 @@ function UserComponent_verif(){
     useEffect(()=>{
         const width = myRef.current.clientWidth;
         const widthScr = myRef.current.scrollWidth;
-        const isOverflowing = width <= widthScr;
+        const isOverflowing = width < widthScr;
 
         if (isOverflowing) {
             setIsClassName("animate-text");

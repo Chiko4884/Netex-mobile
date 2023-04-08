@@ -16,8 +16,6 @@ const seti = [
 function VyvodNaKartu(props){
   const navigation = useNavigate()
 const [cardName, SetCardName] = useState('VISA Казахстан')
-const [walletName, SetWalletName] = useState({clickedCriptoName})
-const [walletValue, SetWalletValue] = useState({clickedCriptoCoin})
 
 const [selectedSeti, setSelectedSeti] = useState(null);
 

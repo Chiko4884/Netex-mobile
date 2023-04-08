@@ -8,27 +8,27 @@ export const funcData = [
     },
     {
         "id": 2,
-        "image": "./img/func_logo2.png",
-        "title": "Оплата услуг",
-        "text": "Оплата услуг",
-    },
-    {
-        "id": 3,
-        "image": "./img/func_logo3.png",
-        "title": "P2P",
-        "text": "P2P",
-    },
-    {
-        "id": 4,
         "image": "./img/func_logo4.png",
         "title": "Вывести",
         "text": "Вывести",
     },
     {
-        "id": 5,
+        "id": 3,
+        "image": "./img/func_logo2.png",
+        "title": "Оплата услуг",
+        "text": "Оплата услуг",
+    },
+    {
+        "id": 4,
         "image": "./img/func_logo5.png",
         "title": "Переводы",
         "text": "Переводы",
+    },
+    {
+        "id": 5,
+        "image": "./img/func_logo3.png",
+        "title": "P2P",
+        "text": "P2P",
     },
     {
         "id": 6,

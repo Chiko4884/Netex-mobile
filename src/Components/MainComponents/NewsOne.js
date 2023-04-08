@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './newsOne.scss'
 import { useNavigate } from "react-router"
-import { Link, useParams } from 'react-router-dom';
-import {dataImageNews} from '../../Datas/dataImageNews'
 import {clickNewsId} from './News'
 import {clickNewsImage} from './News'
 import {clickNewsHeader} from './News'
@@ -12,13 +10,16 @@ import HeaderComponent from '../HeaderComponent';
 function NewsOne(){
 
     const navigate = useNavigate();
-
+useEffect(()=>{
+    if(!clickNewsId){
+        navigate(-1)
+    }
+}, [])
     return (
     <div className="news_container">
 <HeaderComponent title = 'Новости'/>
-
         <div className='div_news'>
-            
+
             <div className='div_new'>
             <img className='news_img'
              src={clickNewsImage} alt='new'/>
@@ -28,7 +29,6 @@ function NewsOne(){
                 <h6>{clickNewsContent}</h6> 
                 </div>
             </div>
-
 
             </div>
     </div>
