@@ -28,9 +28,10 @@ function Uslugi_component(){
 
      const clickedUsluga  = (e)=> {
         setUslugaName(e.title);
-        localStorage.setItem('uslugaName', uslugaName);
+        console.log(uslugaName)
+        localStorage.setItem('uslugaName', e.title);
 }
-    useEffect(()=>{
+    useEffect(() => {
         const Zaderzhka = setTimeout(() => {
             const filtered = filter(inputUpdate, dataUslugi)
             setSpisokUslug(filtered)

@@ -21,7 +21,8 @@ const navigate = useNavigate();
         mode: 'onBlur'
 })
 
-const {user, SetUser} = useContext(CustomContext)
+const {user, SetUser, regUsers, setRegUsers} = useContext(CustomContext)
+
 const loginUser = (e) => {
     let aUser ={
         email: e.email,
@@ -39,12 +40,12 @@ const loginUser = (e) => {
             token: data.accessToken,
             ...data.user
         }))
-
+        navigate('/')
     }
     )
     .catch((err) => console.log(err.message))
 }
-    const onSubmit = data => {console.log(data); {loginUser(data)}; navigate('/')}; //{loginUser(data)}; 
+    const onSubmit = data => {console.log(data); {loginUser(data)}}; //{loginUser(data)}; 
 
     const [toggleIconState, SetToggleIconState] = useState(false)
     const togglePass  = () => {

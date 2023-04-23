@@ -13,7 +13,7 @@ import 'react-image-upload/dist/index.css'
 function Verification(){
     const {user, SetUser, statusVerification, SetStatusVerification} = useContext(CustomContext)
     const navigate = useNavigate()
-    let [verifDataUser, setVerifDataUser] = useState({})
+   
 
     const [selectedImg1, setSelectedImg1] = useState(null)
     const [selectedImg2, setSelectedImg2] = useState(null)
@@ -23,18 +23,18 @@ function Verification(){
         {SetStatusVerification(true)}
     }
     const onSubmit = data => {     
-                                    axios.post(`http://localhost:3030/verifydatausers`, (Object.assign({}, 
-                                    data, 
-                                    {userId: user.id}, 
-                                    {country: valueCountry.label},
-                                    {image1: selectedImg1.dataUrl},
-                                    {image2: selectedImg2.dataUrl},
-                                    )))
-                                    .then(res=> console.log(res.data))
-                                    .catch((err) => console.log(err.message))
-                                    setStatusVerif()
-                                    navigate(-1)
-                             }; 
+        axios.post(`http://localhost:3030/verifydatausers`, (Object.assign({}, 
+        data, 
+        {userId: user.id}, 
+        {country: valueCountry.label},
+        {image1: selectedImg1.dataUrl},
+        {image2: selectedImg2.dataUrl},
+        )))
+        .then(res=> console.log(res.data))
+        .catch((err) => console.log(err.message))
+        setStatusVerif()
+        navigate(-1)
+ }; 
 
 
     const [objCountries, setObjCountries] =useState([])
@@ -79,7 +79,7 @@ function Verification(){
 
     return(
         <div className="korobka_verif">
-            <HeaderComponent title =  '__Верификация аккаунта'/>
+            <HeaderComponent title =  'Верификация аккаунта'/>
             <div className="verif_body">
             <div className="block_info">
                         <img src="./img/znak_predup.png"/>

@@ -1,6 +1,6 @@
 @import '../../vars';
 
-*{
+*{   
     margin: 0;
     padding: 0;
     max-width: 428px;
@@ -22,9 +22,11 @@
     }
 }
 .korobka_history{
+
     width: 100%;
     position: absolute;
     background: #F9F9FF;
+
     .logout{
         display: none;
     }
@@ -33,7 +35,8 @@
     width: 100%;
     position: relative;
     top: 100px;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
+   
 }
 
 .div_select{

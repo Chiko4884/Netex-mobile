@@ -12,7 +12,7 @@ import HeaderComponent from "../HeaderComponent";
 function Vyvod_compon(){
 
     return(
-        <div className="korobka_vyvod">
+        <div className="korob_vyvod">
 <HeaderComponent title = 'Вывод'/>
 <div className="vyvod_body">
         <UserComponent/>

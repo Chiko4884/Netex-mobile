@@ -8,7 +8,7 @@ import { CustomContext } from "../../../Context";
 
 
 function FormaOplaty(){
-    const{uslugaName, uslugaItemId, setUslugaItemId} = useContext(CustomContext)
+    const{uslugaName, clickedItemId, setClickedItemId} = useContext(CustomContext)
     const navigate = useNavigate()
 
 const [oplataPodtver, setOplataPodtver] = useState(false)
@@ -22,11 +22,30 @@ const [uslugaItem, SetUslugaItem] = useState([])
     useEffect(()=>{
         if(uslugaName == 'Свет'){
             setSpisokUslug(dataSvet)
-            SetUslugaItem(spisokUslug.filter(item => item.title === uslugaItemId));
+            SetUslugaItem(spisokUslug.filter(item => item.title === clickedItemId));
         }
-    },[uslugaName, uslugaItemId, spisokUslug])
+    },[uslugaName, clickedItemId, spisokUslug])
     
-console.log(uslugaItem)
+    const [comment, setComment] = useState('Комментарий');
+    const handleInputChange = (event) => {
+        setComment(event.target.value);
+      };
+
+
+    //   пустой слайдер
+    const [currentPage, setCurrentPage] = useState(0); // текущая страница слайдера
+
+    const handlePreviousPage = () => {
+      setCurrentPage(currentPage > 0 ? currentPage - 1 : 0);
+    };
+  
+    const handleNextPage = () => {
+      setCurrentPage(currentPage < 2 ? currentPage + 1 : 2);
+    };
+  
+    const handleDotClick = (pageIndex) => {
+      setCurrentPage(pageIndex);
+    };
 
     return(
 
@@ -61,8 +80,28 @@ console.log(uslugaItem)
         </div>
 
         <p>Комментарий</p>
-        <div className="div_comment"> Комментарий</div>
-        <div className="div_pustoy"> </div>
+        <textarea className="inp_comment"
+              value={comment}
+              onChange={handleInputChange}
+        />
+
+        {/* пустой слайдер */}
+        <div className="div_pustoy"> 
+        {currentPage === 0 && <div className="div_slide" style={{background:'#d8d4d4'}}></div>}
+        {currentPage === 1 && <div className="div_slide" style={{background:'#d8d4ff'}}></div>}
+        {currentPage === 2 && <div className="div_slide" style={{background:'#d8d4dd'}}></div>}
+        </div>
+        <div className="div_tochki">
+        <span onClick={() => handleDotClick(0)} style={{ cursor: 'pointer', color:'#FFE400', marginRight: 20}}>
+          {currentPage === 0 ? '•' : '◦'}
+        </span>
+        <span onClick={() => handleDotClick(1)} style={{ cursor: 'pointer', color:'#FFE400', marginRight: 20 }}>
+          {currentPage === 1 ? '•' : '◦'}
+        </span>
+        <span onClick={() => handleDotClick(2)} style={{ cursor: 'pointer', color:'#FFE400' }}>
+          {currentPage === 2 ? '•' : '◦'}
+        </span>
+      </div>
 
          <button className="btn_prod"
          onClick={toggleOplataPodtver}

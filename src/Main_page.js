@@ -11,7 +11,7 @@ function Main_page(){
     const navigate = useNavigate()
 
         useEffect(() => {
-            if (localStorage.getItem('user') == null){
+            if (localStorage.getItem('user') === null){
                 navigate('/auth_page')
             }
         }, [])

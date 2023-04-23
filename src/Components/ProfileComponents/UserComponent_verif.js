@@ -8,9 +8,10 @@ import { useEffect } from "react";
 import axios from "axios";
 import ImageUploader from 'react-image-upload'
 import 'react-image-upload/dist/index.css'
+import Avatar from "../Avatar";
 
 function UserComponent_verif(){
-    const {user, SetUser, statusVerification, SetStatusVerification} = useContext(CustomContext)
+    const {user, SetUser, statusVerification, SetStatusVerification, avatars, setAvatars} = useContext(CustomContext)
 
     const myRef = useRef(null);
     const [isClassName, setIsClassName] = useState('')
@@ -27,33 +28,17 @@ function UserComponent_verif(){
     },[]);
 
     useEffect(()=>{
-        const idCkeck = axios.get(`http://localhost:3030/verifydatausers/?userId=${user.id}`)
+        axios.get(`http://localhost:3030/verifydatausers/?userId=${user.id}`)
         .then((res)=>{if (res.data.length != 0) {SetStatusVerification(true);console.log('user verified')}}
         )
         .catch((err) => console.log(err.message))
     }, [])
-console.log(`http://localhost:3030/verifydatausers/?userId=${user.id}`)
 
-const [selectedAvatar, setSelectedAvatar] = useState(null)
-function getImageFileObject(imageFile) {
-    console.log( selectedAvatar )
-  }
+ 
     return(
         <div className='user_block'>
         <div className='div_name_balance'>
-        <ImageUploader className= 'avatar'
-      onFileAdded={(img) => getImageFileObject(setSelectedAvatar(img))}
-      style={{
-        borderRadius:17,
-        minHeight:34,
-        minWidth:34,
-        background: '##F3F3F3',
-        position:"relative",
-        marginRight:8
-     }}
-      deleteIcon='-'
-      uploadIcon=''
-    />
+        <Avatar className= 'avatar'/>
             <div className='div_name'>
             <h3 className={isClassName} id="animated_text" ref={myRef}>{user.name} {user.lastname}</h3>
                 <p className={isClassName} id="animated_text" ref={myRef}>{user.email}</p>

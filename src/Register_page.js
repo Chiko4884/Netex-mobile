@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import './register_page.scss'
 import { useForm, useWatch } from 'react-hook-form'; 
 import { useNavigate } from "react-router"
@@ -6,8 +6,8 @@ import axios, { Axios } from 'axios';
 import  {CustomContext}  from './Context';
 import HeaderComponent from './Components/HeaderComponent';
 
+
 function Register_page(){
-    const [email, SetEmail] = useState('')
     const navigate = useNavigate();
     const {user, SetUser} = useContext(CustomContext)
 
@@ -35,6 +35,7 @@ function Register_page(){
         )
         .catch((err) => console.log(err.message))
     }
+    
 
     const {register, handleSubmit,formState:{ errors, isValid }, getValues, watch, formState}=useForm({
         mode: 'onBlur'

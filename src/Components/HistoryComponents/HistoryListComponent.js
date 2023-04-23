@@ -2,11 +2,10 @@ import React from "react";
 import './historyListComponent.scss';
 import { historyData } from "../../Datas/historyData";
 import { useState } from "react";
-import {useForm} from 'react-hook-form';
-import { useEffect } from "react";
 import {motion, AnimatePresence} from 'framer-motion'
 import { listHistDataExp } from "./HistoryComponent";
 
+export let toggleIsOpen = false;
 function HistoryListComponent(){
 
     const DrawStatus = (e) =>{
@@ -25,6 +24,7 @@ function HistoryListComponent(){
     const [paymentToggle, setPaymentToggle] = useState(false)
     const toggleFunc= () => {
         setPaymentToggle(!paymentToggle)
+        toggleIsOpen = !paymentToggle
     }
 
 
@@ -63,9 +63,10 @@ let clickedPayment  = (e)=> {
     SetPayNote(e.note + 'на сумму "' + e.rashod*88 + ' ' + 'СОМ' +
     '", реквизит "' + e.rekvisit + '"')
 
-    setPaymentToggle(!paymentToggle)   
+    // setPaymentToggle(!paymentToggle)  
+    toggleFunc() 
 }
-  
+console.log(toggleIsOpen)
 const [touchPosition, setTouchPosition] = useState(null)
 
 const handleTouchStart = (e) => {
@@ -86,7 +87,8 @@ const handleTouchStart = (e) => {
   }
 
     return(
-        <div className="history_list">
+        <div className="history_list"
+        >
         {listHistDataExp.map((item) => (
             <div key={item.id} className='history_item' onClick= {() => {clickedPayment(item)}}> 
 <div className="icon_title_type_status">
@@ -105,7 +107,7 @@ const handleTouchStart = (e) => {
                 className="payment_toggle"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
-            
+
                 initial={{bottom: '-800px'}}
                 animate={{bottom: '0px'}}
                 exit={{bottom: '-800px'}}

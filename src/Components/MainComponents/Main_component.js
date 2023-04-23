@@ -39,7 +39,7 @@ function Main_component(){
 
     const clickedOption  = (e)=> {
         if (e.title == 'Оплата услуг'){navigate('/oplata_uslug')}
-
+        if (e.title == 'P2P'){navigate('/p2p')}
        console.log(e.title )  
     }
 

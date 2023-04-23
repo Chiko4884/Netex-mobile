@@ -30,6 +30,9 @@ import { AnimatePresence } from 'framer-motion';
 import OplataUslug from './Components/MainComponents/OplataUslug/OplataUslug';
 import Usluga from './Components/MainComponents/OplataUslug/Usluga';
 import FormaOplaty from './Components/MainComponents/OplataUslug/FormaOplaty';
+import P2P from './Components/MainComponents/P2P/P2P';
+import Sdelki from './Components/MainComponents/P2P/Sdelki';
+import SozdatSdelku from './Components/MainComponents/P2P/SozdatSdelku';
 
 
 function App(){
@@ -66,6 +69,9 @@ function App(){
                 <Route path='/oplata_uslug' element= {<OplataUslug/>}/>
                 <Route path='/oplata_uslug/:usluga' element={<Usluga/>}/>
                 <Route path='/oplata_uslug/:usluga/:forma_oplaty' element= {<FormaOplaty/>}/>
+                <Route path='/p2p' element= {<P2P/>}/>
+                <Route path='/p2p/sdelki' element= {<Sdelki/>}/>
+                <Route path='/p2p/sozdat_sdelku' element= {<SozdatSdelku/>}/>
             </Routes>
             </AnimatePresence>
          {location.pathname == '/' || 

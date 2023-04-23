@@ -5,6 +5,7 @@ import HistoryListComponent from "./HistoryListComponent";
 import HeaderComponenent from '../HeaderComponent'
 import { historyData } from "../../Datas/historyData";
 import { useEffect } from "react";
+import { toggleIsOpen } from "./HistoryListComponent";
 
 export let listHistDataExp ;
 
@@ -86,10 +87,13 @@ useEffect(()=>{
   filterFunction()
 }, [selectedOperation])
 
+console.log(toggleIsOpen)
+
     return(
-        <div className="korobka_history">
+        <div className="korobka_history"
+        >
       <HeaderComponenent title = 'История' />
-      <div className="history_body">
+      <div className="history_body"  >
         <div className="div_select">
         <Select className="select"
         defaultValue={selectedOption}

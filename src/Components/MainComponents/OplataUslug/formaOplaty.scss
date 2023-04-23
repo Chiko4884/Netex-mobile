@@ -34,7 +34,6 @@
     width: 100%;
     position: relative;
     top: 100px;
-    padding-bottom: 60px;
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -156,10 +155,12 @@
         }
     }
 
-    .div_comment{
+    .inp_comment{
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        align-items: start;
+        text-align: left;
+        justify-content: start;
         padding: 16px;
         width: 100%;
         height: 167px;
@@ -167,12 +168,36 @@
         border: 1px solid #CCCCCC;
         border-radius: 12px;
         margin-bottom: 16px;
+
+        font-family: 'Roboto',sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #0D121F;
     }
     .div_pustoy{
         width: 100%;
         min-height: 147px;
         background: #F9F9FF;
-        margin-bottom: 40px;
+        margin-bottom: 12px;
+        .div_slide{
+            width: 100%;
+            min-height: 147px;
+        }
+    }
+    .div_tochki{
+        width: 100%;
+        height: 10px;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 0;
+        span{
+            font-size: 38px;
+        }
     }
     .btn_prod{
         display: flex;

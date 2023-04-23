@@ -9,18 +9,18 @@ import { CustomContext } from "../../../Context";
 function Usluga(){
     const [spisokUslug, setSpisokUslug] = useState([])
     const navigate = useNavigate()
-    const{uslugaName, uslugaItemId, setUslugaItemId } = useContext(CustomContext)
-
+    const{uslugaName, clickedItemId, setClickedItemId } = useContext(CustomContext)
+console.log(uslugaName)
     useEffect(()=>{
-        if(uslugaName == 'Свет'){
+        if(uslugaName === 'Свет'){
             setSpisokUslug(dataSvet)
         }
     },[dataSvet])
 
     const clickedUslugaItem  = (e)=> {
-        setUslugaItemId(e.title);
-        localStorage.setItem('uslugaItemId', e.title);
-        console.log(uslugaItemId)  
+        setClickedItemId(e.title);
+        localStorage.setItem('clickedItemId', e.title);
+        console.log(clickedItemId)  
     }
 
     return(

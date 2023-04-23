@@ -186,7 +186,7 @@
     top: 0;
     position: fixed;
     z-index: 10000001;
-    // border: solid 1px red;
+
 }
 .payment_toggle{
     display: flex;
@@ -203,7 +203,7 @@
     border-radius: 24px;
     // border: solid 1px red;
     z-index: 10000002;
-
+    // overflow:hidden;
 
     h3{
         width: 100%;

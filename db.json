@@ -34,6 +34,13 @@
       "name": "Chyngyzbek",
       "lastname": "Akimzhanov",
       "id": 19
+    },
+    {
+      "email": "achs28_84@mail.ru",
+      "password": "$2a$10$sYLoovipVLGIhgVx5NBU8..0nYBl.OE1qDXpMqRENaPlTXOSRhsAi",
+      "name": "Chyngyz",
+      "lastname": "Akimzhanov",
+      "id": 20
     }
   ],
   "verifydatausers": [
@@ -106,6 +113,28 @@
       "image1": "blob:http://localhost:3000/d40e53a2-9454-4156-9745-caa76935c41f",
       "image2": "blob:http://localhost:3000/b0fa5c45-9977-41e7-9f36-110310bf5fbc",
       "id": 19
+    }
+  ],
+  "pathAvatar": [
+    {
+      "user_avatar": "./uploads/uid_2_avatar.jpg",
+      "id": 1
+    },
+    {
+      "user_avatar": "./uploads/uid_15_avatar.JPG",
+      "id": 2
+    },
+    {
+      "user_avatar": "./uploads/uid_20_avatar.jpg",
+      "id": 3
+    },
+    {
+      "user_avatar": "./uploads/uid_15_avatar.jpg",
+      "id": 4
+    },
+    {
+      "user_avatar": "./img/uploads/uid_20_avatar.jpg",
+      "id": 5
     }
   ]
 }
