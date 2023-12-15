@@ -1,4 +1,4 @@
 # Netex-mobile app
 
- Project intern at Navis academy
+trainee's work at the Navis Academy
 
