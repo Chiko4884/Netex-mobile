@@ -2,7 +2,7 @@
   "name": "netex",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+  "homepage": "https://Chiko4884.github.io/Netex-mobile",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
