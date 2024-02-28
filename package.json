@@ -50,6 +50,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "server": "json-server-auth --watch db.json --port 3030",
     "dev": "concurrently \"npm run start\" \"npm run server\" \"node upload_server.js\"",
@@ -75,5 +77,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+    "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "react-native-xml2js": "^1.0.3",
+    "sass": "^1.56.1"
   }
 }
